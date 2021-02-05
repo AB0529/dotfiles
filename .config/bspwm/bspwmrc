@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Load colors from Xresources
+xrdb $HOME/.config/X11/Xresources
+FOCUS_COLOR=$(xrdb -query | grep bsp-focus | awk '{print $NF}')
+
+bspc rule -r "*"
+# --- Auto Start --- #
+sxhkd &
+$HOME/Scripts/polybar.sh &
+# --- Monitors --- #
+# Main : HDMI-A-0
+# Second : DVI-D-0
+# Third : DisplayPort-0
+
+bspc monitor HDMI-A-0 -d     
+bspc monitor DVI-D-0 -d   
+bspc monitor DisplayPort-0 -d  
+
+# -- Global Settings --- #
+bspc config automatic_scheme alternate
+bspc config initial_polarity second_child
+bspc config pointer_modifier lock
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus none
+
+bspc config focus_follows_pointer true
+bspc config remove_disabled_monitors false
+bspc config remove_unplugged_monitors false
+bspc config merge_overlapping_monitors true
+
+bspc config focused_border_color $FOCUS_COLOR
+
+# -- Monitor and Desktop Settings --- #
+bspc config top_padding 32
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config border_width 2
+#bspc config window_gap 10

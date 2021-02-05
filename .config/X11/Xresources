@@ -1,0 +1,10 @@
+! COLORS
+
+background: #282c34
+background-alt: #363b45
+foreground: #bbc2cf
+foreground-alt: #a9a1e1
+highlight: #c678dd
+highlight-alt: #ffffff
+
+bsp-focus: #c678dd

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Xrandr
+xrandr --output HDMI-A-0 --primary --output DVI-D-0 --right-of HDMI-A-0 --output DisplayPort-0 --above DVI-D-0
+# Unclutter
+unclutter -idle 3 &
+# Compmgr
+picom &
+# Wal
+wal -R &
+# Wallpaper
+xwallpaper --zoom .wallpaper.jpg
+# Set cursor
+xsetroot -cursor_name left_ptr &
+# Start backup
+#$HOME/Scripts/backuper.sh &
+
+#exec dwm
+exec dbus-run-session bspwm
