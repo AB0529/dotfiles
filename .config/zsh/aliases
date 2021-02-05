@@ -23,7 +23,7 @@ if [ "$OS" = "Linux" ]; then
     # Add flags to commands
     alias df="df -h"
 
-    alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+    alias dfiles="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 fi
 
 # Shortened Commands
