@@ -7,7 +7,7 @@ FOCUS_COLOR=$(xrdb -query | grep bsp-focus | awk '{print $NF}')
 bspc rule -r "*"
 # --- Auto Start --- #
 sxhkd &
-$HOME/Scripts/polybar.sh &
+$HOME/Scripts/System/polybar.sh &
 # --- Monitors --- #
 # Main : HDMI-A-0
 # Second : DVI-D-0

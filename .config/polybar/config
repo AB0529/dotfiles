@@ -114,22 +114,13 @@ scroll-down = bspwm-deskprev
 ; Separator in between workspaces
 label-separator = |
 
-[module/gcal]
-type = custom/script
-exec = $HOME/Scripts/calander.sh
-label = "%output%"
-interval = 30
-
-click-left = $HOME/Scripts/calander.sh notify
-click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/calander.sh
-
 [module/time]
 type = custom/script
-exec = $HOME/Scripts/time-date.sh
+exec = $HOME/Scripts/Time/time-date.sh
 label = "%output%"
 ; format-underline = 
 interval = 5
-click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/time-date.sh
+click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/Time/time-date.sh
 
 [module/cpu]
 type = internal/cpu
@@ -138,32 +129,32 @@ interval = 1
 
 [module/cpu_temp]
 type = custom/script
-exec = $HOME/Scripts/cm_temps.sh
+exec = $HOME/Scripts/System/cm_temps.sh
 label = "%output%"
 interval = 60 
-click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/cm_temps.sh
+click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/System/cm_temps.sh
 
 [module/audio]
 enable-scroll = true
 type = custom/script
-exec = $HOME/Scripts/audio.sh
+exec = $HOME/Scripts/Audio/audio.sh
 label = "%output%"
-scroll-up = $HOME/Scripts/audio.sh volup
-scroll-down = $HOME/Scripts/audio.sh voldown
-click-left = $HOME/Scripts/audio.sh mute
+scroll-up = $HOME/Scripts/Audio/audio.sh volup
+scroll-down = $HOME/Scripts/Audio/audio.sh voldown
+click-left = $HOME/Scripts/Audio/audio.sh mute
 click-right = pavucontrol -t 3
-click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/audio.sh
+click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/Audio/audio.sh
 interval = 1 
 
 [module/mic]
 enable-scroll = true
 type = custom/script
-exec = $HOME/Scripts/microphone.sh
+exec = $HOME/Scripts/Audio/microphone.sh
 label = "%output%"
 
-scroll-up = $HOME/Scripts/microphone.sh volup
-scroll-down = $HOME/Scripts/microphone.sh voldown
-click-left = $HOME/Scripts/microphone.sh mute
+scroll-up = $HOME/Scripts/Audio/microphone.sh volup
+scroll-down = $HOME/Scripts/Audio/microphone.sh voldown
+click-left = $HOME/Scripts/Audio/microphone.sh mute
 click-right = pavucontrol -t 4
-click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/microphone.sh
+click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/Audio/microphone.sh
 interval = 1 

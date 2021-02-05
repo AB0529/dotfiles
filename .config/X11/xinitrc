@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Export path
+export PATH=$PATH:$HOME/.local/bin
+
 # Xrandr
 xrandr --output HDMI-A-0 --primary --output DVI-D-0 --right-of HDMI-A-0 --output DisplayPort-0 --above DVI-D-0
 # Unclutter

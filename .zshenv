@@ -1,7 +1,6 @@
 export TERMINAL=/usr/bin/alacritty
 export BROWSER=/usr/bin/librewolf
 export EDITOR=/usr/bin/nvim
-export ZSH=$HOME/.oh-my-zsh
 export OS=`uname`
 
 if [ "$OS" = "Darwin" ]; then
@@ -21,6 +20,7 @@ else
     export PATH="$DENO_INSTALL/bin:$PATH"
     export CODING=$HOME/Coding
     export PICS=$HOME/Pics
+
 fi
 
 export SCRIPTS=$HOME/Scripts
