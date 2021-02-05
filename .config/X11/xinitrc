@@ -16,7 +16,7 @@ xwallpaper --zoom .wallpaper.jpg
 # Set cursor
 xsetroot -cursor_name left_ptr &
 # Start backup
-#$HOME/Scripts/backuper.sh &
+$HOME/Scripts/System/backuper.sh &
 
 #exec dwm
 exec dbus-run-session bspwm

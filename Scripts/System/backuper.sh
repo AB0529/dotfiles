@@ -1,7 +1,7 @@
 #!/bin/bash
-source $HOME/Scripts/settings.sh
 set -e
 
+to_backup="$HOME/Pics $HOME/Documents"
 backup_dir="/media/Extra/Backups"
 timestamp=$(date +"%a-%m-%d-%y_%I:%M-%p")
 sync_icon="$PICS/Icons/sync-ico.png"
