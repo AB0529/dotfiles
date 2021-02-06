@@ -65,7 +65,7 @@ font-3 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=true;
 font-4 = Hack Nerd Font Mono:pixelsize=10:scale=.6:antialias=true;
 
 modules-left = bspwm xwindow
-modules-right = mic audio cpu_temp cpu time 
+modules-right = gif_rec mic audio cpu_temp cpu time 
 
 ;tray-position = right
 ;tray-padding = 1
@@ -121,6 +121,12 @@ label = "%output%"
 ; format-underline = 
 interval = 5
 click-middle = $TERMINAL -e $EDITOR $HOME/Scripts/Time/time-date.sh
+
+[module/gif_rec]
+type = custom/script
+exec = pgrep ffmpeg 1>/dev/null && echo "🔴"
+label = "%output%"
+interval = 3
 
 [module/cpu]
 type = internal/cpu

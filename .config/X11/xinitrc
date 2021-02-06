@@ -9,10 +9,10 @@ xrandr --output HDMI-A-0 --primary --output DVI-D-0 --right-of HDMI-A-0 --output
 unclutter -idle 3 &
 # Compmgr
 picom &
-# Wal
-wal -R &
 # Wallpaper
 xwallpaper --zoom .wallpaper.jpg
+# Wal
+wal -Rn &
 # Set cursor
 xsetroot -cursor_name left_ptr &
 # Start backup

@@ -1,10 +1,20 @@
 ! COLORS
 
-background: #282c34
-background-alt: #363b45
-foreground: #bbc2cf
-foreground-alt: #a9a1e1
-highlight: #c678dd
-highlight-alt: #ffffff
+#define COL_BG #121012
+#define COL_BG2 #1f1c1f
+#define COL_FG #bbc2cf
+#define COL_FG2 #a9a1e1
+#define COL_HL #A6A1E3
+#define COL_HL2 #ffffff
 
-bsp-focus: #c678dd
+*.background: COL_BG 
+*.foreground: COL_FG
+
+background: COL_BG
+background-alt: COL_BG2
+foreground: COL_FG
+foreground-alt: COL_FG2
+highlight: COL_HL
+highlight-alt: COL_HL2
+
+bsp-focus: COL_HL

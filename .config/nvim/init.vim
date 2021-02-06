@@ -1,5 +1,6 @@
 " Vim Plugins
 call plug#begin()
+Plug 'chrisbra/Colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-plug'
 Plug 'ntk148v/vim-horizon'
@@ -35,6 +36,8 @@ set termguicolors
 colorscheme horizon
 highlight Pmenu ctermbg=gray guibg=gray
 set ft=dosini
+" Color toggle
+nnoremap <C-c> :ColorToggle<CR>
 
 " Abbreviations
 abbr #b #!/bin/bash
