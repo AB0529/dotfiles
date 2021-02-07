@@ -50,13 +50,11 @@ alt + shift + {a,s,w,d}
 
 
 # Move focus
-super +  {a,s,w,d}
+super + {a,s,w,d}
     bspc config pointer_follows_monitor true; \
     bspc config pointer_follows_focus true; \
     dir={west,south,north,east}; \
-    bspc node -f $dir || bspc monitor -f $dir; \
-    bspc config pointer_follows_monitor false; \
-    bspc config pointer_follows_focus false
+    bspc node $dir -f || bspc monitor $dir -f
 
 
 # Switch to desktop by index relative to monitor

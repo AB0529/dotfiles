@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Nvim
+Exec=/home/ab/.local/bin/nvim-wrapper %f
+Categories=Other;
+NoDisplay=true
+MimeType=text/x-go
+Terminal=false

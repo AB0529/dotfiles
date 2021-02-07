@@ -8,8 +8,6 @@ image/gif=userapp-sxiv -A 30-DYNEY0.desktop
 
 [Added Associations]
 application/pdf=librewolf.desktop;
-application/png=sxiv.deskop
-application/jpg=sxiv.desktop
 image/jpeg=sxiv.desktop;
 image/png=sxiv.desktop;
 text/x-go=userapp-nvim-wrapper-ZP4YX0.desktop;
