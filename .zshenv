@@ -26,3 +26,4 @@ fi
 
 export SCRIPTS=$HOME/Scripts
 export GOPATH=$CODING/.gopath:$CODING/Go
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup

@@ -140,7 +140,7 @@ Prior
 
 # Take screenshot
 ctrl + shift + backslash
-    flameshot gui
+   flameshot gui
 # Start/stop record gif
 ctrl + shift + BackSpace
     pgrep -f 'ffmpeg' && killall ffmpeg || $HOME/Scripts/Misc/recorder.sh gif
