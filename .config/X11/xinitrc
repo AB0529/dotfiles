@@ -17,4 +17,5 @@ wal -n -R &
 $HOME/Scripts/System/backuper.sh &
 
 #exec dwm
-exec dbus-run-session bspwm
+# exec dbus-run-session bspwm
+exec dbus-launch --exit-with-x11 bspwm
