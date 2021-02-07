@@ -8,7 +8,11 @@ bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating
 # --- Auto Start --- #
 sxhkd &
+unclutter -idle 3 &
+xwallpaper --zoom $HOME/.wallpaper.jpg &
+wal -Rn &
 $HOME/Scripts/System/polybar.sh &
+$HOME/Scripts/System/backuper.sh &
 # --- Monitors --- #
 # Main : HDMI-A-0
 # Second : DVI-D-0
