@@ -13,6 +13,6 @@ case "$1" in
     voldown) pactl set-source-volume $source -$inc% ;;
 esac
 
-[ $mute = "yes" ] && echo " $vol%" && exit
+[ $mute = "yes" ] && echo " $vol%" && exit
 
-echo " $vol%"
+echo " $vol%"

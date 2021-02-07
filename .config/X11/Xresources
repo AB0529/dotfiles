@@ -1,10 +1,10 @@
 ! COLORS
 
-#define COL_BG #282c34
-#define COL_BG2 #50536b
+#define COL_BG #1c1e26
+#define COL_BG2 #2a2c38
 #define COL_FG #bbc2cf
-#define COL_FG2 #a9a1e1
-#define COL_HL #A6A1E3
+#define COL_FG2 #a07bd4
+#define COL_HL #572a95
 #define COL_HL2 #ffffff
 
 *.background: COL_BG 

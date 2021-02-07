@@ -2,4 +2,8 @@ key_bindings:
     - { key: V, mods: Alt, action: Paste }
     - { key: C, mods: Alt, action: Copy }
 
+cursor:
+    style: Beam
+    unfocused_hollow: false
+
 background_opacity: 0.8

@@ -1,0 +1,66 @@
+* {
+  text:       #dfdfdf;
+  text-alt:   #b2b2b2;
+  bg:         #1c1e2680;
+  selected:   #572a95;
+  prompt:     #a07bd4;
+
+  spacing: 0;
+  background-color: transparent;
+
+  font: "Hack Nerd Font 14";
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  lines: 10;
+  background-color: @bg;
+}
+
+mainbox {
+  border: 10;
+  padding: 10;
+}
+
+inputbar {
+  margin: 0px 0px 20px 0px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @prompt;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  border-radius: 3px;
+}
+
+element selected {
+  background-color: @selected;
+  text-color: @text;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @selected;
+}

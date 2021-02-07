@@ -86,11 +86,11 @@ super + {Left,Down,Up,Right}
 
 # -- Applications -- #
 super + grave 
-    rofi -show drun -theme onedark
+    rofi -show drun -theme ab-theme
     # PATH=~/.local/bin:$PATH dmenu_run -l 5 -i 
 
 super + c
-    rofi -show calc -theme onedark
+    rofi -show calc -theme ab-theme
 
 super + Return
     $TERMINAL

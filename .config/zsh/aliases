@@ -8,7 +8,7 @@ if [ "$OS" = "Linux" ]; then
     # Update pacman packages
     alias ab-pacupdate="sudo pacman -Syyu"
     # Update AUR and Pacman packages
-    alias ab-update="paru -Syu"
+    alias ab-update="paru -Syu && betterdiscordctl upgrade"
     # Change ls to exa
     alias ls="exa --icons --color=always --group-directories-first"
     # Change grep to ripgrep
