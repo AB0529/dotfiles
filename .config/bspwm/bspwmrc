@@ -7,7 +7,6 @@ FOCUS_COLOR=$(xrdb -query | grep bsp-focus | awk '{print $NF}')
 bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating
 # --- Auto Start --- #
-sxhkd &
 $HOME/Scripts/System/polybar.sh &
 # --- Monitors --- #
 # Main : HDMI-A-0

@@ -6,6 +6,7 @@ ext="${file##*.}"
 case "$ext" in
     go) ;&
     py) ;&
-    rs) $TERMINAL -e $EDITOR $file ;;
-    *) xdg-open $file ;;
+    rs) $TERMINAL -e $EDITOR "$file" && exit 0;;
 esac
+
+xdg-open "$file"
