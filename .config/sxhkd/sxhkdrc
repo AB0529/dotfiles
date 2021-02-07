@@ -56,7 +56,7 @@ super +  {a,s,w,d}
     dir={west,south,north,east}; \
     bspc node -f $dir || bspc monitor -f $dir; \
     bspc config pointer_follows_monitor false; \
-    bspc onfig pointer_follows_focus false
+    bspc config pointer_follows_focus false
 
 
 # Switch to desktop by index relative to monitor
@@ -79,7 +79,7 @@ super + f
 # Increase/descrease gap size
 super { ,+ shift }+ z
 	bspc config window_gap $(($(bspc config window_gap) {+,-} 3))
-
+e
 # Move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
@@ -90,7 +90,7 @@ super + grave
     # PATH=~/.local/bin:$PATH dmenu_run -l 5 -i 
 
 super + c
-    rofi -show calc -theme ab-theme
+    rofi -show calc -theme ab-theme -no-history
 
 super + Return
     $TERMINAL
@@ -98,7 +98,7 @@ super + Return
 super + b
     $BROWSER
 super + r
-    $TERMINAL -e ranger
+    $TERMINAL -e ranger $HOME
 
 super + shift + b
     $BROWSER --private-window
@@ -147,7 +147,7 @@ ctrl + shift + backslash
    flameshot gui
 # Start/stop record gif
 ctrl + shift + BackSpace
-    pgrep -f 'ffmpeg' && killall ffmpeg || $HOME/Scripts/Misc/recorder.sh gif
+    pgrep ffmpeg && killall ffmpeg || $HOME/Scripts/Misc/recorder.sh gif
 # Start/stop record video
 # ctrl + shift + Return
     # pgrep -f 'simplescreenrec' && killall simplescreenrec || $HOME/Scripts/Misc/recorder.sh video
@@ -159,3 +159,14 @@ super + shift + c
 # Open notes
 super + n
     $TERMINAL --class AB-Notes -t AB-Notes -e $HOME/Scripts/Texts/notes.sh
+
+# Open differnet notes
+super + shift + n
+    rofi -show file-browser-extended -theme ab-theme -file-browser-dir $HOME/Documents/Notes/ \
+        -file-browser-cmd "$TERMINAL --class AB-Notes -t AB-Notes -e $EDITOR"
+
+# Quick open files in vim
+super + space
+    rofi -show file-browser-extended -theme ab-theme -file-browser-dir $HOME -file-browser-depth 10 \
+        -file-browser-only-files -file-browser-cmd "$HOME/Scripts/Misc/open-wrapper.sh" \
+        -file-browser-exclude {\.cache,\.cargo,node_modules}

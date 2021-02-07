@@ -1,6 +1,19 @@
 [Default Applications]
 x-scheme-handler/https=librewolf.desktop
 x-scheme-handler/http=librewolf.desktop
+image/jpeg=sxiv.desktop
+image/png=sxiv.desktop
+text/x-go=userapp-nvim-wrapper-ZP4YX0.desktop
+image/gif=userapp-sxiv -A 30-DYNEY0.desktop
 
 [Added Associations]
 application/pdf=librewolf.desktop;
+application/png=sxiv.deskop
+application/jpg=sxiv.desktop
+image/jpeg=sxiv.desktop;
+image/png=sxiv.desktop;
+text/x-go=userapp-nvim-wrapper-ZP4YX0.desktop;
+image/gif=userapp-sxiv -A 30-DYNEY0.desktop;sxiv.desktop;
+
+[Removed Associations]
+text/x-go=userapp-nvim-wrapper-ZKN5X0.desktop;userapp-$TERMINAL -e nvim-1OJVX0.desktop;
