@@ -87,6 +87,9 @@ super + grave
     rofi -show drun -theme ab-theme
     # PATH=~/.local/bin:$PATH dmenu_run -l 5 -i 
 
+super + shift + grave
+    rofi -show run -theme ab-theme
+
 super + c
     rofi -show calc -theme ab-theme -no-history
 

@@ -18,7 +18,7 @@ sxhkd &
 # Other
 unclutter -idle 3 &
 feh --bg-fill $HOME/.wallpaper.jpg
-picom &
+xcompmgr &
 wal -n -R &
 $HOME/Scripts/System/backuper.sh &
 

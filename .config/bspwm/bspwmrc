@@ -15,7 +15,7 @@ $HOME/Scripts/System/polybar.sh &
 
 bspc monitor HDMI-A-0 -d     
 bspc monitor DVI-D-0 -d   
-bspc monitor DisplayPort-0 -d  
+bspc monitor DisplayPort-0 -d   
 
 # -- Global Settings --- #
 bspc config automatic_scheme alternate
