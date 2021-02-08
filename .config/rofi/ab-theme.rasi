@@ -1,7 +1,7 @@
 * {
   text:       #dfdfdf;
   text-alt:   #b2b2b2;
-  bg:         #1c1e2680;
+  bg:         #1c1e26cc;
   selected:   #572a95;
   prompt:     #a07bd4;
 
