@@ -1,5 +1,5 @@
 #!/bin/bash
-mouse_id=9
+mouse_id=18
 
 while true; do
 
