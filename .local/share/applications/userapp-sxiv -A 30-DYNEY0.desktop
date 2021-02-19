@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=sxiv_gif
-Exec=sxiv -A 30 %F
-Categories=Other;
-NoDisplay=true
-MimeType=image/gif
-Terminal=false

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=A Wine application
-MimeType=text/vbscript;
-Exec=env WINEPREFIX="/home/ab/.steam/steam/steamapps//compatdata/244850/pfx" /usr/bin/wine start /ProgIDOpen VBSFile %f
-NoDisplay=true
-StartupNotify=true
