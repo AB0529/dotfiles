@@ -2,8 +2,8 @@
   text:       #dfdfdf;
   text-alt:   #b2b2b2;
   bg:         #1c1e26cc;
-  selected:   #572a95;
-  prompt:     #a07bd4;
+  selected:  #d05d9b;
+  prompt:    #d05d9b;
 
   spacing: 0;
   background-color: transparent;

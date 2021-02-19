@@ -11,7 +11,7 @@ background-alt = ${xrdb:background-alt}
 background-wm = ${colors.background-alt} 
 
 foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:foreground-alt} 
+foreground-alt = ${xrdb:foreground-alt}
 
 primary = ${xrdb:highlight} 
 alert = ${xrdb:highlight}

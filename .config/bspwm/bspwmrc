@@ -9,13 +9,13 @@ bspc rule -a Alacritty:AB-Notes state=floating
 # --- Auto Start --- #
 $HOME/Scripts/System/polybar.sh &
 # --- Monitors --- #
-# Main : HDMI-A-0
-# Second : DVI-D-0
-# Third : DisplayPort-0
+# Main : HDMI-1
+# Second : DVI-D-1
+# Third : DP-3
 
-bspc monitor HDMI-A-0 -d     
-bspc monitor DVI-D-0 -d   
-bspc monitor DisplayPort-0 -d   
+bspc monitor HDMI-1 -d     
+bspc monitor DVI-D-1 -d   
+bspc monitor DP-3 -d   
 
 # -- Global Settings --- #
 bspc config automatic_scheme alternate

@@ -5,6 +5,8 @@ image/jpeg=sxiv.desktop
 image/png=sxiv.desktop
 text/x-go=userapp-nvim-wrapper-ZP4YX0.desktop
 image/gif=userapp-sxiv -A 30-DYNEY0.desktop
+text/plain=userapp-alacritty -e-182UY0.desktop
+x-scheme-handler/discord-744174695930134589=discord-744174695930134589.desktop
 
 [Added Associations]
 application/pdf=librewolf.desktop;
@@ -12,6 +14,7 @@ image/jpeg=sxiv.desktop;
 image/png=sxiv.desktop;
 text/x-go=userapp-nvim-wrapper-ZP4YX0.desktop;
 image/gif=userapp-sxiv -A 30-DYNEY0.desktop;sxiv.desktop;
+text/plain=userapp-alacritty -e-182UY0.desktop;nvim.desktop;
 
 [Removed Associations]
 text/x-go=userapp-nvim-wrapper-ZKN5X0.desktop;userapp-$TERMINAL -e nvim-1OJVX0.desktop;

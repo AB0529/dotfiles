@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=nvim
+Exec=alacritty -e %f
+Categories=Other;
+NoDisplay=true
+MimeType=text/plain
+Terminal=false

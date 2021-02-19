@@ -10,7 +10,7 @@ fi
 export PATH=$HOME/.local/bin:$PATH
 
 # Xrandr
-xrandr --output HDMI-A-0 --primary --output DVI-D-0 --right-of HDMI-A-0 --output DisplayPort-0 --above DVI-D-0
+xrandr --output HDMI-1 --primary --output DVI-D-1 --right-of HDMI-1 --output DP-3 --above DVI-D-1
 # Set cursor
 xsetroot -cursor_name left_ptr
 sxhkd &
@@ -18,7 +18,7 @@ sxhkd &
 # Other
 unclutter -idle 3 &
 feh --bg-fill $HOME/.wallpaper.jpg
-xcompmgr &
+picom &
 wal -n -R &
 $HOME/Scripts/System/backuper.sh &
 
