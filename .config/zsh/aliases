@@ -1,6 +1,6 @@
 # SSH
-alias ab-ssh="ssh ab@vps-ab"
-alias ab-sshr="ssh root@vps-root"
+alias ab-ssh="ssh ab@ab-vps"
+alias ab-sshr="ssh root@ab-bps"
 
 # Linux only aliases
 if [ "$OS" = "Linux" ]; then 
