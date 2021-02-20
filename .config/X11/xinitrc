@@ -14,6 +14,8 @@ xrandr --output HDMI-1 --primary --output DVI-D-1 --right-of HDMI-1 --output DP-
 # Set cursor
 xsetroot -cursor_name left_ptr
 sxhkd &
+# Polybar
+$HOME/Scripts/System/polybar.sh &
 
 # Other
 unclutter -idle 3 &
