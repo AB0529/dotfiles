@@ -8,6 +8,8 @@ fi
 
 # Set path
 export PATH=$HOME/.local/bin:$PATH
+export AWT_TOOLKIT=MToolkit
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Xrandr
 xrandr --output HDMI-1 --primary --output DVI-D-1 --right-of HDMI-1 --output DP-3 --above DVI-D-1

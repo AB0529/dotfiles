@@ -21,7 +21,6 @@ else
     export PATH="$DENO_INSTALL/bin:$PATH"
     export CODING=$HOME/Coding
     export PICS=$HOME/Pics
-
 fi
 
 export SCRIPTS=$HOME/Scripts
