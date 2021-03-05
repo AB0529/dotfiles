@@ -18,5 +18,6 @@ text/x-moc=neovim.desktop;
 text/x-pascal=neovim.desktop;
 text/x-tcl=neovim.desktop;
 text/x-tex=neovim.desktop;
+x-scheme-handler/discord-482370205331226644=discord-482370205331226644.desktop;
 x-scheme-handler/discord-744174695930134589=discord-744174695930134589.desktop;
 x-scheme-handler/steam=steam.desktop;

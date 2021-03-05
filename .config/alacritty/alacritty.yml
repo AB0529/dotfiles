@@ -7,3 +7,7 @@ cursor:
     unfocused_hollow: false
 
 background_opacity: 0.8
+
+# font:
+    # normal:
+        # family: JetBrains Mono

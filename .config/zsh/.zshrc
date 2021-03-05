@@ -1,3 +1,14 @@
+# Load antigen
+source $ZDOTDIR/antigen.zsh
+export ANTIGEN_COMPDUMPFILE="$ZDOTDIR/.zcompdump"
+ANTIGEN_AUTO_CONFIG=false
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen apply
+
 # Flex
 cat ~/.cache/wal/sequences
 neofetch
@@ -30,10 +41,7 @@ bindkey '^v' edit-command-line
 # Enter vim buffer from normal mode
 autoload -U edit-command-line && zle -N edit-command-line && bindkey -M vicmd "^v" edit-command-line
 
-# Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/git/git.zsh
-
 # Starship prompt
 eval "$(starship init zsh)"
+
+# Plugins
