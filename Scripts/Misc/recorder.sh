@@ -13,6 +13,9 @@ case "$1" in
         ffmpeg -y -i "$TMPFILE" -i /tmp/palette.png -filter_complex "paletteuse" $OUTPUT.gif
         rm -f $TMPFILE
 
+        # Optimize gif
+        gifsicle -i $OUTPUT.gif -O3 --colors 256 -o $OUTPUT.gif
+
         dragon-drag-and-drop --and-exit $OUTPUT.gif
 
         trap "rm -f '$TMPFILE'" 0
