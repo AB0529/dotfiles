@@ -29,10 +29,3 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-
-# Custom universal variables
-SETUVAR XDG_CONFIG_HOME:"$HOME/.config"
-SETUVAR XDG_CACHE_HOME:"$HOME/.cache"
-SETUVAR XDG_DATA_HOME:"$HOME/.local/share"
-SETUVAR XDG_DESKTOP_DIR:"$HOME"
-SETUVAR XINITRC:"$XDG_CONFIG_HOME/X11/xinitrc"
