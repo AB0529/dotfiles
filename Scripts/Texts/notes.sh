@@ -1,7 +1,7 @@
 #!/bin/bash 
-noteFilename=$HOME/Documents/Notes/`date +%Y-%m-%d`.md
+noteFilename=$HOME/Documents/Notes/notes.md
 
-# Create note file if not existant
+# Create note file if not existent
 [ ! -f $noteFilename ] && echo "# Notes for `date +%Y-%m-%d`" > $noteFilename
 
 # Open notes in vim

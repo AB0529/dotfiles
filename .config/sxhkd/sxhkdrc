@@ -98,6 +98,7 @@ super + Return
 
 super + b
     $BROWSER
+
 super + r
     $TERMINAL -e ranger $HOME
 
@@ -162,9 +163,9 @@ super + n
     $TERMINAL --class AB-Notes -t AB-Notes -e $HOME/Scripts/Texts/notes.sh
 
 # Open differnet notes
-super + shift + n
-    rofi -show file-browser-extended -theme ab-theme -file-browser-dir $HOME/Documents/Notes/ \
-        -file-browser-cmd "$TERMINAL --class AB-Notes -t AB-Notes -e $EDITOR"
+# super + shift + n
+    # rofi -show file-browser-extended -theme ab-theme -file-browser-dir $HOME/Documents/Notes/ \
+        # -file-browser-cmd "$TERMINAL --class AB-Notes -t AB-Notes -e $EDITOR"
 
 # Quick open files in vim
 super + space
