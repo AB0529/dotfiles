@@ -28,6 +28,7 @@ alias dfiles="/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
 # Shortened Commands
 alias py="python3"
 alias nf="neofetch"
+abbr p "sudo pacman -S"
 
 # Confirm before overwrite
 alias rm="rm -i"
