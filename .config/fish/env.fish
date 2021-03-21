@@ -4,6 +4,7 @@ set -e fish_greeting
 set -g TERMINAL /usr/bin/alacritty
 set -g BROWSER /usr/bin/librewolf
 set -g EDITOR /usr/bin/nvim
+set -g TZ "America/New_York"
 
 set -g XDG_CACHE_HOME "$HOME/.cache"
 set -g XDG_CONFIG_HOME "$HOME/.config"

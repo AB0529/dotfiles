@@ -1,5 +1,6 @@
 #!/bin/sh
 clock=$(date '+%I')
+export TZ=America/New_York
 
 case "$clock" in
 	"00") icon="🕛" ;;
