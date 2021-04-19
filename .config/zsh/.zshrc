@@ -44,4 +44,5 @@ autoload -U edit-command-line && zle -N edit-command-line && bindkey -M vicmd "^
 # Starship prompt
 eval "$(starship init zsh)"
 
+source /usr/share/nvm/init-nvm.sh
 # Plugins
