@@ -10,6 +10,7 @@ x-scheme-handler/discord-744174695930134589=discord-744174695930134589.desktop
 application/x-shellscript=neovim.desktop
 x-scheme-handler/discord-482370205331226644=discord-482370205331226644.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/discord-549300994148663326=discord-549300994148663326.desktop
 
 [Added Associations]
 application/pdf=librewolf.desktop;
