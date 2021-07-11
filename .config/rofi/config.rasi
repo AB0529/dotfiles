@@ -1,5 +1,0 @@
-configuration {
-    modi: "drun,calc,file-browser-extended";
-    lines: 5;
-    show-icons: true;
-}
