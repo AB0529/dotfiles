@@ -1,0 +1,20 @@
+! COLORS
+
+#define COL_BG #1c1e26
+#define COL_BG2 #2a2c38
+#define COL_FG #bbc2cf
+#define COL_FG2  #6e6e6e
+#define COL_HL #d05d9b
+#define COL_HL2 #ffffff
+
+*.background: COL_BG 
+*.foreground: COL_FG
+
+background: COL_BG
+background-alt: COL_BG2
+foreground: COL_FG
+foreground-alt: COL_FG2
+highlight: COL_HL
+
+bsp-focus: COL_HL
+

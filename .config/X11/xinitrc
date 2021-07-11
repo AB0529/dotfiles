@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Test for existing DBUS daemon
+if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
+  eval `dbus-launch --sh-syntax --exit-with-session`
+  echo "D-Bus per-session daemon address is: $DBUS_SESSION_BUS_ADDRESS"
+fi
+
+# Set path
+export PATH=$HOME/.local/bin:$PATH
+export AWT_TOOLKIT=MToolkit
+export _JAVA_AWT_WM_NONREPARENTING=1
+export SXHKD_SHELL="/usr/bin/bash"
+export TERMINAL=/usr/bin/alacritty
+export BROWSER=/usr/bin/librewolf
+export EDITOR=/usr/bin/nvim
+
+# Xrandr
+xrandr --output HDMI-1 --primary --output DVI-D-1 --right-of HDMI-1 --output DP-3 --above DVI-D-1
+# Set cursor
+xsetroot -cursor_name left_ptr
+sxhkd &
+# Polybar
+$HOME/Scripts/System/polybar.sh &
+
+# Other
+unclutter -idle 3 &
+feh --bg-fill $HOME/.wallpaper.jpg
+picom &
+wal -n -R &
+$HOME/Scripts/System/backuper.sh &
+
+#exec dwm
+exec dbus-launch bspwm
+# exec dbus-launch --exit-with-x11 bspwm
+# exec dbus-launch --autolaunch=$(cat /var/lib/dbus/machine-id) bspwm
