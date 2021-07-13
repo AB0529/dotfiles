@@ -143,6 +143,18 @@ Next
 Pause
     $HOME/Scripts/Audio/audio.sh mute
 
+# Volume up
+super + equal
+    $HOME/Scripts/Audio/audio.sh volup
+
+# Volume down
+super + minus
+    $HOME/Scripts/Audio/audio.sh voldown
+
+# Set volume
+super + shift + Up
+    $HOME/Scripts/Audio/audio.sh volset $VOL 
+
 # Toggle Mic Hearing
 Prior
     $HOME/Scripts/Audio/hear-mic-toggle.sh
