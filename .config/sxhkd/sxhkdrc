@@ -152,7 +152,7 @@ super + minus
     $HOME/Scripts/Audio/audio.sh voldown
 
 # Set volume
-super + shift + Up
+super + shift + equal 
     $HOME/Scripts/Audio/audio.sh volset $VOL 
 
 # Toggle Mic Hearing
