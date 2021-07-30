@@ -93,7 +93,7 @@ super + alt + p
 super + shift + grave
     rofi -show run -theme ab-theme
 
-super + c
+alt + c
     rofi -show calc -theme ab-theme -no-history
 
 super + Return
@@ -136,23 +136,23 @@ alt + 1
     $HOME/Scripts/Spotify/spotify_next.sh
 
 # Toggle Mic Mute
-Next
+super + c
     $HOME/Scripts/Audio/microphone.sh mute
 
 # Toggle audio mute
-Pause
+Print
     $HOME/Scripts/Audio/audio.sh mute
 
 # Volume up
-super + equal
+XF86AudioRaiseVolume
     $HOME/Scripts/Audio/audio.sh volup
 
 # Volume down
-super + minus
+XF86AudioLowerVolume
     $HOME/Scripts/Audio/audio.sh voldown
 
 # Set volume
-super + shift + equal 
+XF86AudioMute
     $HOME/Scripts/Audio/audio.sh volset $VOL 
 
 # Toggle Mic Hearing
