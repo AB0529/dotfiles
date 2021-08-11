@@ -140,7 +140,7 @@ super + c
     $HOME/Scripts/Audio/microphone.sh mute
 
 # Toggle audio mute
-Print
+XF86AudioMute
     $HOME/Scripts/Audio/audio.sh mute
 
 # Volume up
@@ -152,7 +152,7 @@ XF86AudioLowerVolume
     $HOME/Scripts/Audio/audio.sh voldown
 
 # Set volume
-XF86AudioMute
+super + XF86AudioRaiseVolume
     $HOME/Scripts/Audio/audio.sh volset $VOL 
 
 # Toggle Mic Hearing
