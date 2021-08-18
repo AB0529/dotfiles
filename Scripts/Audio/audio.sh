@@ -1,6 +1,6 @@
 #!/bin/sh
-speakers="alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo"
-headphones="alsa_output.pci-0000_08_00.3.analog-stereo"
+speakers="alsa_output.pci-0000_08_00.3.analog-stereo"
+headphones="alsa_output.usb-Razer_Razer_Nari_Essential-00.analog-stereo.monitor"
 
 sink=$(pacmd list-sinks | grep "*" -A1 | awk 'FNR==2 { print $2 }' | sed -e 's/<\|>//g')
 vol=$(pamixer --get-volume)

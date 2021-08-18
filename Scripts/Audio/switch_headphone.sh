@@ -1,6 +1,6 @@
 #!/bin/sh
 icon="$HOME/Pics/Icons/headphone-ico.png"
-headphones="alsa_output.pci-0000_08_00.3.analog-stereo"
+headphones="alsa_output.usb-Razer_Razer_Nari_Essential-00.analog-stereo"
 
 for playing in $(pacmd list-sink-inputs | awk '$1 == "index:" {print $2}')
 do

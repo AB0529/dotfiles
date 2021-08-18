@@ -1,6 +1,6 @@
 #!/bin/sh
 icon="$HOME/Pics/Icons/speaker-ico.png"
-speakers="alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo"
+speakers="alsa_output.pci-0000_08_00.3.analog-stereo"
 
 for playing in $(pacmd list-sink-inputs | awk '$1 == "index:" {print $2}')
 do
