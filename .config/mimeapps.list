@@ -20,6 +20,8 @@ application/xhtml+xml=librewolf.desktop
 application/x-extension-xhtml=librewolf.desktop
 application/x-extension-xht=librewolf.desktop
 video/x-matroska=mpv.desktop
+x-scheme-handler/discord-694795560288256021=discord-694795560288256021.desktop
+x-scheme-handler/discord-692435241373270077=discord-692435241373270077.desktop
 
 [Added Associations]
 application/pdf=librewolf.desktop;
