@@ -2,7 +2,7 @@
 
 # Load colors from Xresources
 xrdb $HOME/.config/X11/Xresources
-FOCUS_COLOR=$(xrdb -query | grep color1 | cut -f 2 | head -1)
+FOCUS_COLOR=$(xrdb -query | grep background | cut -f 2 | head -1)
 
 bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating

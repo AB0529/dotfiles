@@ -98,7 +98,7 @@ alt + c
     rofi -show calc -no-history
 
 super + Return
-    $TERMINAL
+    $TERMINAL -t "$(hostname)@$(whoami)"
 
 super + b
     $BROWSER
