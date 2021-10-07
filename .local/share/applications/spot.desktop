@@ -1,8 +1,0 @@
-[Desktop Entry]
-
-Type=Application
-Name=Spot
-Comment=Spotify no ads
-Exec=spot
-Icon=spotify-client
-Categories=Script;System;Music;

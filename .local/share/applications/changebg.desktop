@@ -1,8 +1,0 @@
-[Desktop Entry]
-
-Type=Application
-Name=ChangeBG
-Comment=Changes Background
-Exec=changebg
-Icon=/home/ab/Pics/Icons/shell-ico.png
-Categories=Script;System;Wallpaper;

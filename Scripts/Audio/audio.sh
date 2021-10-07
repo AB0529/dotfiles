@@ -1,6 +1,6 @@
 #!/bin/sh
 speakers="alsa_output.pci-0000_08_00.3.analog-stereo"
-headphones="alsa_output.usb-Razer_Razer_Nari_Essential-00.analog-stereo.monitor"
+headphones="alsa_output.usb-Razer_Razer_Nari_Essential-00.iec958-stereo"
 
 sink=$(pacmd list-sinks | grep "*" -A1 | awk 'FNR==2 { print $2 }' | sed -e 's/<\|>//g')
 vol=$(pamixer --get-volume)
@@ -20,5 +20,4 @@ case "$1" in
         pactl set-sink-volume $sink $v% ;;
 esac
 
-[ $mute = true ] && echo "🔇 $vol%" && exit
-[ $sink = $speakers ] && echo "🔉 $vol%" || echo "🎧 $vol%"
+[ $sink = $speakers ] && echo "墳" || echo ""
