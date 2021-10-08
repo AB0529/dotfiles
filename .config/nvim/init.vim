@@ -4,11 +4,11 @@ Plug 'chrisbra/Colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-plug'
 Plug 'ntk148v/vim-horizon'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'baopham/vim-nerdtree-unfocus'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'ervandew/supertab'
 call plug#end()
