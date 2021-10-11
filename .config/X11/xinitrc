@@ -26,7 +26,7 @@ $HOME/Scripts/System/polybar.sh &
 
 # Other
 unclutter -idle 3 &
-feh --bg-fill $HOME/.wallpaper.jpg
+xwallpaper --zoom .wallpaper.jpg
 picom &
 #wal -n -R &
 $HOME/Scripts/System/backuper.sh &
