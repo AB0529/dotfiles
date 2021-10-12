@@ -1,0 +1,8 @@
+[Desktop Entry]
+
+Type=Application
+Name=ChangeTheme
+Comment=Changes system theme
+Exec=changetheme
+Icon=/home/ab/Pics/Icons/shell-ico.png
+Categories=Script;System;
