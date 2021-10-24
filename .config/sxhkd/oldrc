@@ -1,0 +1,194 @@
+#!/bin/bash
+
+# --- BSPWM Bindings --- #
+# Quit BSPWM
+super + shift + Escape
+    bspc quit
+
+# Kill Window
+super + shift + q
+    bspc node -c
+
+# Fullscreen toggle
+super + f
+    bspc node -t \~fullscreen
+
+# Swap window with focus
+super + shift + {a,s,w,d}
+    bspc config pointer_follows_focus true; \
+    cur_win=$(bspc query -N -n); \
+    cur_mon=$(bspc query -M -m); \
+    dir={west,south,north,east}; \
+    if ! bspc node -f $dir; then \
+        bspc node -m $dir; \
+        bspc monitor -f $dir; \
+    else \
+        new_mon=$(bspc query -M -m); \
+        [ "$new_mon" = "$cur_mon" ] && \
+            bspc node $cur_win -m $new_mon || bspc node -s $cur_win; \
+        bspc node -f $cur_win; \
+    fi; \
+    bspc config pointer_follows_focus false
+
+# Change window with focus
+alt + shift + {a,s,w,d}
+    bspc config pointer_follows_focus true; \
+    cur_win=$(bspc query -N -n); \
+    cur_mon=$(bspc query -M -m); \
+    dir={west,south,north,east}; \
+    if ! bspc node -f $dir; then \
+        bspc node -m $dir; \
+        bspc monitor -f $dir; \
+    else \
+        new_mon=$(bspc query -M -m); \
+        [ "$new_mon" = "$cur_mon" ] && \
+            bspc node -s $cur_win || bspc node $cur_win -m $new_mon ; \
+        bspc node -f $cur_win; \
+    fi; \
+    bspc config pointer_follows_focus false
+
+
+
+# Move focus
+super + {a,s,w,d}
+    bspc config pointer_follows_monitor true; \
+    bspc config pointer_follows_focus true; \
+    dir={west,south,north,east}; \
+    bspc node $dir -f || bspc monitor $dir -f
+
+
+# Switch to desktop by index relative to monitor
+super + {1-9}
+    D={1-9}; \
+    bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
+
+super + shift + {1-9}
+    D={1-9}; \
+    bspc node -d "$(bspc query -D -m | sed -n "$D p")"
+
+# Toggle floating
+super + shift + f
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Toggle fullscreen
+super + f
+    bspc node -t \~fullscreen
+
+# Increase/descrease gap size
+super { ,+ shift }+ z
+	bspc config window_gap $(($(bspc config window_gap) {+,-} 3))
+e
+# Move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# -- Applications -- #
+super + grave 
+    rofi-launcher
+    #rofi -show drun
+    # PATH=~/.local/bin:$PATH dmenu_run -l 5 -i 
+
+super + alt + p
+    dmenu_run
+
+super + shift + grave
+    rofi -show run
+
+alt + c
+    rofi -show calc -no-history
+
+super + Return
+    $TERMINAL -t "$(hostname)@$(whoami)"
+
+super + b
+    $BROWSER
+
+super + r
+    $TERMINAL -e ranger $HOME
+
+super + shift + b
+    $BROWSER --private-window
+
+# -- System Control -- #
+# Restart hotkey daemon
+super + shift + x
+   notify-send "SXHKD Restart" && \ 
+    pkill sxhkd && \ 
+    sxhkd &
+
+# Restart polybar
+# super + shift + p
+   # notify-send "Polybar Restart" && kill -9 $(pgrep -f 'polybar') && $HOME/Scripts/polybar.sh
+
+# Switch to speaker
+ctrl + shift + s
+    $HOME/Scripts/Audio/switch_speaker.sh
+
+# Switch to headphone
+ctrl + shift + h
+    $HOME/Scripts/Audio/switch_headphone.sh
+
+# Pause spotify
+alt + grave 
+    $HOME/Scripts/Spotify/spotify_pause.sh
+
+# Next spotify
+alt + 1
+    $HOME/Scripts/Spotify/spotify_next.sh
+
+# Toggle Mic Mute
+super + c
+    $HOME/Scripts/Audio/microphone.sh mute
+
+# Toggle audio mute
+XF86AudioMute
+    $HOME/Scripts/Audio/audio.sh mute
+
+# Volume up
+XF86AudioRaiseVolume
+    $HOME/Scripts/Audio/audio.sh volup
+
+# Volume down
+XF86AudioLowerVolume
+    $HOME/Scripts/Audio/audio.sh voldown
+
+# Set volume
+super + XF86AudioRaiseVolume
+    $HOME/Scripts/Audio/audio.sh volset $VOL 
+
+# Toggle Mic Hearing
+Prior
+    $HOME/Scripts/Audio/hear-mic-toggle.sh
+
+# Take screenshot
+ctrl + shift + backslash
+   flameshot gui
+# Start/stop record gif
+ctrl + shift + BackSpace
+    pgrep ffmpeg && killall ffmpeg || $HOME/Scripts/Misc/recorder.sh gif
+# Start/stop record video
+# ctrl + shift + Return
+    # pgrep -f 'simplescreenrec' && killall simplescreenrec || $HOME/Scripts/Misc/recorder.sh video
+
+# Toggle compositor
+super + shift + c
+    pgrep -x "picom">/dev/null && pkill picom || picom 
+
+# Toggle SXHKD
+super + shift + x
+    prgrep -x "sxhkd">/dev/null && pkill sxhkd || sxhkd
+
+# Open notes
+super + n
+    $TERMINAL --class AB-Notes -t AB-Notes -e $HOME/Scripts/Texts/notes.sh
+
+# Open differnet notes
+# super + shift + n
+    # rofi -show file-browser-extended -theme ab-theme -file-browser-dir $HOME/Documents/Notes/ \
+        # -file-browser-cmd "$TERMINAL --class AB-Notes -t AB-Notes -e $EDITOR"
+
+# Quick open files in vim
+super + space
+    rofi -show file-browser-extended -theme ab-theme -file-browser-dir $HOME -file-browser-depth 10 \
+        -file-browser-only-files -file-browser-exclude {\.cache,\.cargo,node_modules} \
+        -file-browser-cmd "$HOME/Scripts/Misc/open-wrapper.sh"
