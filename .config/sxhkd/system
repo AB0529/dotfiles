@@ -8,7 +8,10 @@
 super + shift + x
    notify-send "SXHKD Restart" && \ 
     pkill sxhkd && \ 
-    sxhkd &
+    sxhkd -c $HOME/.config/sxhkd/bspwm \
+     $HOME/.config/sxhkd/system \
+     $HOME/.config/sxhkd/apps \
+     $HOME/.config/sxhkd/audio &
 
 # Polybar
 super + shift + p

@@ -23,7 +23,7 @@ XF86AudioLowerVolume
     $SCRIPTS/Audio/audio.sh voldown
 # Volume Set
 super + XF86AudioRaiseVolume
-    $SCRIPTS/Audio/audio.sh colset $VOL
+    $SCRIPTS/Audio/audio.sh volset $VOL
 # Toggle Audio Mute
 XF86AudioMute
     $SCRIPTS/Audio/audio.sh mute
