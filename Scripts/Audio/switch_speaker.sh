@@ -7,5 +7,5 @@ do
     pacmd move-sink-input $playing $speakers
 done
 
-$HOME/Scripts/System/polybar.sh && pa_movesinks $speakers && notify-send -t 1000 -i $icon "Default Output" "Now using speakers"
+pa_movesinks $speakers && notify-send -t 1000 -i $icon "Default Output" "Now using speakers"
 

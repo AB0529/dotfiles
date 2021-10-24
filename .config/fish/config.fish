@@ -1,5 +1,6 @@
 # Load env vars
-source $HOME/.config/fish/env.fish
+set -e fish_greeting
+posix-source $HOME/.env
 
 # Vanity
 cat ~/.cache/wal/sequences

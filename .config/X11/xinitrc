@@ -14,5 +14,6 @@ export SXHKD_SHELL="/bin/bash"
 export TERMINAL=/usr/bin/alacritty
 export BROWSER=/usr/bin/firefox-bin
 export EDITOR=/usr/bin/nvim
+export $(cat $HOME/.env | xargs -L 1)
 
 exec dbus-launch bspwm

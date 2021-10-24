@@ -41,6 +41,8 @@ nnoremap <C-c> :ColorToggle<CR>
 
 " Abbreviations
 abbr #b #!/bin/bash
+abbr #f #!/bin/fish
+abbr #-= # -=-=-=-=-=-=-=-=-=-=-=
 
 " Move lines up and down
  nnoremap <C-k> :m-2<CR>

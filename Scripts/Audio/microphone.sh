@@ -1,6 +1,5 @@
 #!/bin/sh
 microphone="alsa_input.pci-0000_00_14.2.analog-stereo"
-#microphone="alsa_input.pci-0000_00_14.2.analog-stereo"
 
 source=$(pacmd list-sources | grep "*" -A1 | awk 'FNR==2 { print $2 }' | sed -e 's/<\|>//g')
 mute=$(pacmd list-sources | grep "*" -A11 | awk 'END {print $2}')

@@ -7,4 +7,4 @@ do
     pacmd move-sink-input $playing $headphones
 done
 
-$HOME/Scripts/System/polybar.sh && pa_movesinks $headphones && notify-send -t 1000 -i $icon "Default Output" "Now using headphones"
+pa_movesinks $headphones && notify-send -t 1000 -i $icon "Default Output" "Now using headphones"

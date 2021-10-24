@@ -14,7 +14,10 @@ xrandr --output HDMI-A-0 --primary --output DisplayPort-0 --left-of HDMI-A-0 --o
 # Set cursor
 xsetroot -cursor_name left_ptr &
 # Hotkey Daemon
-sxhkd &
+sxhkd -c $HOME/.config/sxhkd/bspwm \
+    $HOME/.config/sxhkd/system \
+    $HOME/.config/sxhkd/apps \
+    $HOME/.config/sxhkd/audio &
 # Polybar & Theme
 $HOME/Scripts/Misc/changetheme.sh blade &
 # Unclutter

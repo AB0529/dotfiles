@@ -12,7 +12,7 @@ case "$1" in
     volup) pactl set-sink-volume $sink +$inc% ;;
     voldown) pactl set-sink-volume $sink -$inc% ;;
     volset) 
-        v=$(rofi -dmenu -p "🔊 Set Volume" -lines 0 -separator-style "none" -theme ab-theme.rasi &)
+        v=$(rofi -dmenu -p " Set Volume" -lines 0 -separator-style "none" -theme ~/.config/rofi/confirm.rasi &)
         wait
         echo $v
         [ $v -gt 100 ] && v=100
