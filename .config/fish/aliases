@@ -1,7 +1,8 @@
 #!/bin/fish
 
 alias ab-backup="$HOME/Scripts/System/backuper.sh"
-alias ab-update="sudo emerge -avuND @world"
+# alias ab-update="sudo emerge -avuND @world"
+abbr -a -g ab-update sudo emerge -avuND @world
 # Change ls to exa
 alias ls="exa --icons --color=always --group-directories-first"
 # Change grep to ripgrep
