@@ -16,7 +16,7 @@ case "$1" in
         # Optimize gif
         gifsicle -i $OUTPUT.gif -O3 --colors 256 -o $OUTPUT.gif
 
-        dragon-drag-and-drop --and-exit $OUTPUT.gif
+        dragon -x $OUTPUT.gif
 
         trap "rm -f '$TMPFILE'" 0
     ;;
