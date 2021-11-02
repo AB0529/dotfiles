@@ -14,7 +14,7 @@ case "$1" in
         rm -f $TMPFILE
 
         # Optimize gif
-        gifsicle -i $OUTPUT.gif -O3 --colors 256 -o $OUTPUT.gif
+        gifsicle -i $OUTPUT.gif -O3 --colors 256 --lossy=50 -o $OUTPUT.gif
 
         dragon -x $OUTPUT.gif
 
