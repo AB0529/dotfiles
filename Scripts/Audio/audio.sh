@@ -3,12 +3,12 @@ speakers="alsa_output.pci-0000_08_00.3.analog-stereo"
 headphone="alsa_output.usb-Razer_Razer_Nari_Essential-00.analog-stereo"
 
 sink=$(pacmd list-sinks | grep "*" -A1 | awk 'FNR==2 { print $2 }' | sed -e 's/<\|>//g')
-vol=$(pamixer --get-volume)
-mute=$(pamixer --get-mute)
+vol=$(pulsemixer --get-volume)
+mute=$(pulsemixer --get-mute)
 inc=5
 
 case "$1" in
-    mute) [ $mute = true ] && pactl set-sink-mute $sink "no" || pactl set-sink-mute $sink "yes" ; pkill -RTMIN+15 dwmblocks ;;
+    mute) [ $mute = 1 ] && pactl set-sink-mute $sink "no" || pactl set-sink-mute $sink "yes" ;;
     volup) pactl set-sink-volume $sink +$inc% ;;
     voldown) pactl set-sink-volume $sink -$inc% ;;
     volset) 

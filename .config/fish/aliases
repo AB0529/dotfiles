@@ -3,6 +3,7 @@
 alias ab-backup="$HOME/Scripts/System/backuper.sh"
 # alias ab-update="sudo emerge -avuND @world"
 abbr -a -g ab-update sudo emerge -avuND @world
+abbr -a -g sem sudo emerge -a 
 # Change ls to exa
 alias ls="exa --icons --color=always --group-directories-first"
 # Change grep to ripgrep
@@ -41,7 +42,7 @@ alias re="cd $HOME/Repos"
 
 # Open with vim
 alias bsp="nvim $XDG_CONFIG_HOME/bspwm/bspwmrc"
-alias sx="nvim $XDG_CONFIG_HOME/sxhkd/sxhkdrc"
+alias sx="nvim $XDG_CONFIG_HOME/sxhkd/"
 alias frc="nvim $XDG_CONFIG_HOME/fish/config.fish"
 alias fa="nvim $XDG_CONFIG_HOME/fish/aliases" 
 alias vrc="nvim $XDG_CONFIG_HOME/nvim/init.vim"

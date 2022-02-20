@@ -27,7 +27,7 @@ xwallpaper --zoom .wallpaper.jpg
 # Compton
 picom &
 # Start backup
-$HOME/Scripts/System/backuper.sh &
+# $HOME/Scripts/System/backuper.sh &
 
 # -- Global Settings --- #
 # Load colors from Xresources
