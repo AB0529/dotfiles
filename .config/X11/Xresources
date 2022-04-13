@@ -1,27 +1,20 @@
-! -----------------------------------------------------------------------------
-! Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-!
-! Blade color scheme
-! -----------------------------------------------------------------------------
-
-*foreground:        #ffffff
-*background:        #0c1018
+*foreground:        #cdd0c3
+*background:        #282134
 
 ! Colors 0-15.
-*color0:  #20242C
-*color1:  #F8506D
-*color2:  #F06576
-*color3:  #CF916E
-*color4:  #FA3C82
-*color5:  #E9698E
-*color6:  #EA7288
-*color7:  #f1c4c0
-*color8:  #a88986
-*color9:  #F8506D
-*color10:  #F06576
-*color11:  #CF916E
-*color12:  #FA3C82
-*color13:  #E9698E
-*color14:  #EA7288
-*color15:  #f1c4c0
+*color0: "#282134"
+*color1: "#4C7497"
+*color2: "#D05D9B"
+*color3: "#6C8B9B"
+*color4: "#7697C2"
+*color5: "#97A797"
+*color6: "#9BA29D"
+*color7: "#cdd0c3"
+*color8: "#8f9188"
+*color9: "#4C7497"
+*color10: "#D05D9B"
+*color11: "#6C8B9B"
+*color12: "#7697C2"
+*color13: "#97A797"
+*color14: "#9BA29D"
+*color15: "#cdd0c3"

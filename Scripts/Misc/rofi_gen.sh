@@ -2,7 +2,7 @@
 # Generates an alacritty color config from currently loaded X resources.
 
 xrdb_grep() {
-    xrdb -query | grep "$1" | cut -f 2 | head -1
+    xrdb -query | grep "$1" | cut -f 2 | head -1 | tr -d '"'
 }
 
 color_from_line() {
@@ -15,6 +15,6 @@ printf '	al: %s80;\n' "$(xrdb_grep 'background')"
 printf '	bg: %s80;\n' "$(xrdb_grep 'background')"
 printf '	bga: %s80;\n' "$(xrdb_grep 'background')"
 printf '	fg: %s80;\n' "$(xrdb_grep 'foreground')"
-printf '	ac: %s80;\n' "$(xrdb_grep 'color1')"
-printf '	se: %s80;\n' "$(xrdb_grep 'color1')"
+printf '	ac: %s80;\n' "$(xrdb_grep 'color2')"
+printf '	se: %s80;\n' "$(xrdb_grep 'color2')"
 printf '}'
