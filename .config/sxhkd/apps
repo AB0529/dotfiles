@@ -24,7 +24,7 @@ super + r
 
 # Open notes
 super + n
-    $TERMINAL --class AB-Notes -t AB-Notes -e $SCRIPTS/Texts/notes.sh
+    $SCRIPTS/Texts/notes.sh
 
 # Take screenshot
 ctrl + shift + backslash
