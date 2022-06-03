@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-to_backup="$HOME/Pics $HOME/Documents"
+to_backup="$HOME/Pics $HOME/Documents $HOME/.ssh"
 backup_dir="/media/Extra/Backups"
 timestamp=$(date +"%a-%m-%d-%y_%I:%M-%p")
 sync_icon="$PICS/Icons/sync-ico.png"
