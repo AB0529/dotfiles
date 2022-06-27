@@ -1,0 +1,89 @@
+#!/bin/bash 
+
+# Quit BSPWM
+super + shift + Escape
+    bspc quit
+
+# -=-=-=-=-=-=-=-=-=-=-=
+# --- Window Actions ---
+# -=-=-=-=-=-=-=-=-=-=-=
+
+# Kill Window
+super + shift + q
+    bspc node -c
+
+# Fullscreen Toggle
+super + f
+    bspc node -t \~fullscreen
+
+# Toggle Floating
+super + shift + f
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Toggle Fullscreen
+super + f
+    bspc node -t \~fullscreen
+
+# Increase/Decrease Gap Size
+super { ,+ shift }+ z
+    bspc config window_gap $(($(bspc config window_gap) {+,-} 3))
+
+# Move a Floating Window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# -=-=-=-=-=-=-=-=-=-=-=
+#  --- Window Focus ---
+# -=-=-=-=-=-=-=-=-=-=-=
+
+# Swap Window with Focus
+super + shift + {a,s,w,d}
+    bspc config pointer_follows_focus true; \
+    cur_win=$(bspc query -N -n); \
+    cur_mon=$(bspc query -M -m); \
+    dir={west,south,north,east}; \
+    if ! bspc node -f $dir; then \
+        bspc node -m $dir; \
+        bspc monitor -f $dir; \
+    else \
+        new_mon=$(bspc query -M -m); \
+        [ "$new_mon" = "$cur_mon" ] && \
+            bspc node $cur_win -m $new_mon || bspc node -s $cur_win; \
+        bspc node -f $cur_win; \
+    fi; \
+    bspc config pointer_follows_focus false
+
+# Change Window with Focus
+alt + shift + {a,s,w,d}
+    bspc config pointer_follows_focus true; \
+    cur_win=$(bspc query -N -n); \
+    cur_mon=$(bspc query -M -m); \
+    dir={west,south,north,east}; \
+    if ! bspc node -f $dir; then \
+        bspc node -m $dir; \
+        bspc monitor -f $dir; \
+    else \
+        new_mon=$(bspc query -M -m); \
+        [ "$new_mon" = "$cur_mon" ] && \
+            bspc node -s $cur_win || bspc node $cur_win -m $new_mon ; \
+        bspc node -f $cur_win; \
+    fi; \
+    bspc config pointer_follows_focus false
+
+# Move Focus
+super + {a,s,w,d}
+    bspc config pointer_follows_monitor true; \
+    bspc config pointer_follows_focus true; \
+    dir={west,south,north,east}; \
+    bspc node $dir -f || bspc monitor $dir -f
+
+# Switch to desktop by index relative to monitor
+super + {1-9}
+    D={1-9}; \
+    bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
+
+super + shift + {1-9}
+    D={1-9}; \
+    bspc node -d "$(bspc query -D -m | sed -n "$D p")"
+
+

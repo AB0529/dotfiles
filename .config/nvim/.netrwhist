@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/ab/.config/polybar'
+let g:netrw_dirhist_5='/home/ab/.config'
+let g:netrw_dirhist_4='/home/ab/.config/polybar'
+let g:netrw_dirhist_3='/etc/portage/package.accept_keywords'
+let g:netrw_dirhist_2='/home/ab/.config/polybar'
+let g:netrw_dirhist_1='/home/ab/.config/bspwm/polybar'
