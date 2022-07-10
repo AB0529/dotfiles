@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'chrisbra/Colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-plug'
-Plug 'ntk148v/vim-horizon'
+Plug 'shaunsingh/nord.nvim'
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
@@ -33,7 +33,7 @@ set clipboard+=unnamedplus
 
 " Colors
 set termguicolors
-colorscheme horizon
+colorscheme nord
 highlight Pmenu ctermbg=gray guibg=gray
 set ft=dosini
 " Color toggle

@@ -19,7 +19,7 @@ sxhkd -c $HOME/.config/sxhkd/bspwm \
     $HOME/.config/sxhkd/apps \
     $HOME/.config/sxhkd/audio &
 # Polybar & Theme
-$HOME/Scripts/Misc/changetheme.sh cotton_candy &
+$HOME/Scripts/Misc/changetheme.sh ocean &
 # Unclutter
 unclutter -idle 3 &
 # Wallpaper

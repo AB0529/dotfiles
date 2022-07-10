@@ -9,8 +9,8 @@ super + Return
     $TERMINAL -t "$(hostname)@$(whoami)"
 
 # Launcher
-super + grave 
-    rofi-launcher
+super + grave
+    $HOME/.config/rofi/launcher.sh
 
 # Browser
 super + b
