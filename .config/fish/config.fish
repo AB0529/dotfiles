@@ -1,5 +1,5 @@
 # Load env vars
-set -e fish_greeting
+set -U fish_greeting ""
 posix-source $HOME/.env
 
 # Vanity
