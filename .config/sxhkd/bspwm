@@ -32,6 +32,26 @@ super { ,+ shift }+ z
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# Shrink window left
+alt + a
+    bspc node -z right -20 0
+    bspc node -z left +20 0
+
+# Expand window right
+alt + d
+    bspc node -z right +20 0
+    bspc node -z left -20 0
+
+# Expand window up
+alt + w
+    bspc node -z top 0 -20
+    bspc node -z bottom 0 +20
+
+# Shrink window down
+alt + s
+    bspc node -z top 0 +20
+    bspc node -z bottom 0 -20
+
 # -=-=-=-=-=-=-=-=-=-=-=
 #  --- Window Focus ---
 # -=-=-=-=-=-=-=-=-=-=-=
