@@ -31,8 +31,8 @@ ctrl + shift + backslash
    flameshot gui
 
 # Start/stop record gif
-ctrl + shift + BackSpace
-    pgrep ffmpeg && killall ffmpeg || $SCRIPTS/Misc/recorder.sh gif
+# ctrl + shift + BackSpace
+    # pgrep ffmpeg && killall ffmpeg || $SCRIPTS/Misc/recorder.sh gif
 
 # Quick Open Files
  # super + space
