@@ -33,6 +33,7 @@ picom &
 # Load colors from Xresources
 xrdb $HOME/.config/X11/Xresources
 FOCUS_COLOR=$(xrdb -query | grep background | cut -f 2 | head -1)
+export TERMINAL=/usr/bin/alacritty
 
 bspc config automatic_scheme alternate
 bspc config initial_polarity second_child
