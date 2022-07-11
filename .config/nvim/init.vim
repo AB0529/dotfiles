@@ -4,17 +4,19 @@ Plug 'chrisbra/Colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-plug'
 Plug 'shaunsingh/nord.nvim'
-" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
-Plug 'baopham/vim-nerdtree-unfocus'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'mzlogin/vim-markdown-toc'
 Plug 'ervandew/supertab'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 let mapleader=" "
 let g:python3_host_prog = '/usr/bin/python' 
+
+" FZF
+map <Leader>m :Files <Esc>
 
 " Spacings
 set expandtab
