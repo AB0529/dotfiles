@@ -17,4 +17,4 @@ normilize() {
 [ ! -f "$NOTESPATH/$NOTE" ] && normilize $NOTE > $NOTESPATH/$NOTE
 
 # Open notes in vim
-[ ! -z "$NOTE" ] && $TERMINAL --class AB-Notes -t AB-Notes -e nvim -c 'norm o' -c 'norm ddpp' -c 'startinsert' $NOTESPATH/$NOTE
+[ ! -z "$NOTE" ] && $TERMINAL --class AB-Notes -t AB-Notes -e nvim -c 'norm Go' -c 'norm ddpp' -c 'startinsert' $NOTESPATH/$NOTE
