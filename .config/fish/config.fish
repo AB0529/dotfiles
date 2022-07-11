@@ -5,6 +5,7 @@ posix-source $HOME/.env
 # Vanity
 cat ~/.cache/wal/sequences
 neofetch
+cd
 
 # Load aliases file
 [ -f "$XDG_CONFIG_HOME/fish/aliases" ] && source $XDG_CONFIG_HOME/fish/aliases

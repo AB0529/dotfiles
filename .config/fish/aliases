@@ -8,6 +8,7 @@ abbr -a -g sem sudo emerge -a
 alias ls="exa --icons --color=always --group-directories-first"
 # Change grep to ripgrep
 alias grep="rg"
+alias cd="cd && ls"
 
 alias nou="cat $SCRIPTS/Texts/nou.txt | xclip -sel clip"
 alias fuckyou="$SCRIPTS/Texts/fuckyou.sh"

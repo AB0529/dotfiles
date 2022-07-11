@@ -32,4 +32,4 @@ ctrl + shift + backslash
 
 # Quick Open Files
 super + space
-    sh-rofi-file-launcher
+    $SCRIPTS/Misc/rofi-file-launcher.sh
