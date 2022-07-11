@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Change Background
+Comment=Change the wallpaper
+Exec=sh-changebg
+Icon=shell-ico
+Terminal=false
+Type=Application
+Categories=Scripts;Utilities;

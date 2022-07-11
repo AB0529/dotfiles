@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Change the System Theme
+Comment=Change the system theme
+Exec=sh-changetheme
+Icon=shell-ico
+Terminal=false
+Type=Application
+Categories=Scripts;Utilities;
