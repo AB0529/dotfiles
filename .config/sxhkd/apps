@@ -30,10 +30,6 @@ super + n
 ctrl + shift + backslash
    flameshot gui
 
-# Start/stop record gif
-# ctrl + shift + BackSpace
-    # pgrep ffmpeg && killall ffmpeg || $SCRIPTS/Misc/recorder.sh gif
-
 # Quick Open Files
- super + space
-    rofi -show file-browser-extended -theme $XDG_CONFIG_HOME/rofi/launcher.rasi -file-browser-dir $HOME -file-browser-depth 10 -file-browser-only-files -file-browser-exclude {\.cache,\.cargo,node_modules} -file-browser-cmd "$SCRIPTS/Misc/nvim-open-wrapper.sh"
+super + space
+    sh-rofi-file-launcher
