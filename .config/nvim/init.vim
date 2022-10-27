@@ -46,7 +46,8 @@ filetype plugin on
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
-nnoremap <C-_> :call NERDComment(0,"toggle") <CR>
+nmap <C-_> <plug>NERDCommenterToggle
+vmap <C-_> <plug>NERDCommenterToggle<CR>gv
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
