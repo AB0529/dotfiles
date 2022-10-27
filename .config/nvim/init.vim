@@ -15,8 +15,9 @@ set splitright
 set list
 set listchars=tab:>-
 set mouse=a
+set rnu
 
-let maplaeder = ' '
+let mapleader = ' '
 
 call plug#begin()
 
