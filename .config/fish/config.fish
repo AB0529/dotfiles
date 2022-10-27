@@ -14,4 +14,4 @@ source $XDG_CONFIG_HOME/fish/git_aliases
 # Starship prompt
 starship init fish | source
 # SSH Agent
-fish_ssh_agent
+#fish_ssh_agent

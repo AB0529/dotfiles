@@ -5,9 +5,10 @@ alias ab-backup="$HOME/Scripts/System/backuper.sh"
 abbr -a -g ab-update sudo emerge -avuND @world
 abbr -a -g sem sudo emerge -a 
 # Change ls to exa
-alias ls="exa --icons --color=always --group-directories-first"
+#alias ls="exa --icons --color=always --group-directories-first"
+alias cat="bat"
 # Change grep to ripgrep
-alias grep="rg"
+#alias grep="rg"
 
 alias nou="cat $SCRIPTS/Texts/nou.txt | xclip -sel clip"
 alias fuckyou="$SCRIPTS/Texts/fuckyou.sh"
