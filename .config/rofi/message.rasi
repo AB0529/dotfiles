@@ -10,7 +10,7 @@
 
 window {
     width:      			320px;
-    padding:    			25px;
+    padding:    			10;
     border:					0px 0px 1px 0px;
     border-radius:          0px;
     border-color:           @se;

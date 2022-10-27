@@ -10,7 +10,7 @@ set expandtab
 set autoindent
 set fileformat=unix
 set spell
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set splitright
 set list
 set listchars=tab:>-
