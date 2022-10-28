@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=AniCli
 Comment=Watch anime from the terminal
-Exec=alacritty -e ani-cli
+Exec=alacritty -e /home/ab/Repos/ani-cli/ani-cli
 Icon=sakamoto
 Terminal=false
 Type=Application
