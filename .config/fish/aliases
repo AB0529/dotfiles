@@ -1,21 +1,11 @@
 #!/bin/fish
 
-alias ab-backup="$HOME/Scripts/System/backuper.sh"
-# alias ab-update="sudo emerge -avuND @world"
-abbr -a -g ab-update sudo emerge -avuND @world
-abbr -a -g sem sudo emerge -a 
-# Change ls to exa
-#alias ls="exa --icons --color=always --group-directories-first"
+alias ls="ls --color=always --group-directories-first"
 alias cat="bat"
-# Change grep to ripgrep
-#alias grep="rg"
 
 alias nou="cat $SCRIPTS/Texts/nou.txt | xclip -sel clip"
 alias fuckyou="$SCRIPTS/Texts/fuckyou.sh"
 alias se="sudoedit"
-
-# Add flags to commands
-alias df="df -h"
 
 alias dfiles="/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
 

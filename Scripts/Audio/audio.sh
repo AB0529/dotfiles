@@ -29,7 +29,7 @@ else
     # Charging
     [ $HEADPHONE_STATUS == -1 ] && echo " ()"
     # Off
-    [ $HEADPHONE_STATUS == -2 ] && echo " ()"
+    [ $HEADPHONE_STATUS == -2 ] && echo ""
 
     echo " ($HEADPHONE_STATUS%)"
 fi
