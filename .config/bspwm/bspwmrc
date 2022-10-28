@@ -19,7 +19,7 @@ sxhkd -c $HOME/.config/sxhkd/bspwm \
     $HOME/.config/sxhkd/apps \
     $HOME/.config/sxhkd/audio &
 # Polybar & Theme
-sh-changetheme ocean &
+sh-changetheme dracula.rasi &
 # Unclutter
 unclutter -idle 3 &
 # Wallpaper
