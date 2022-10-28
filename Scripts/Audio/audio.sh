@@ -20,4 +20,16 @@ case "$1" in
         pactl set-sink-volume $sink $v% ;;
 esac
 
-[ $sink = $speakers ] && echo "墳" || echo " ($(headsetcontrol -bc)%)"
+
+if [ $sink = $speakers ]; then
+    echo echo "墳"
+else
+    HEADPHONE_STATUS=$(headsetcontrol -bc)
+
+    # Charging
+    [ $HEADPHONE_STATUS == -1 ] && echo " ()"
+    # Off
+    [ $HEADPHONE_STATUS == -2 ] && echo " ()"
+
+    echo " ($HEADPHONE_STATUS%)"
+fi
