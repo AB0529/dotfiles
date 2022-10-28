@@ -15,4 +15,7 @@ if [ ! -z "$QUERY" ]; then
 
     # Append to history file
     echo $QUERY >> $HISTORY_FILE
+
+    # Remove duplicates
+    awk -i inplace '!seen[$0]++' $HISTORY_FILE
 fi
