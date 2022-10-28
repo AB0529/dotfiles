@@ -2,11 +2,11 @@
 NOTESPATH=$HOME/Documents/Notes
 
 # Open list of notes from directory
-NOTE=$(ls $NOTESPATH | rofi -dmenu -no-config -no-lazy-grab -theme styles.rasi)
+NOTE=$(ls $NOTESPATH | rofi -dmenu -no-config -no-lazy-grab -p Note: -theme ~/.config/rofi/message.rasi)
 
 [ -z "$NOTE" ] && exit 0
 
-# Normalize function to fix names
+# Normalize function to fix naes
 normilize() {
     local c1=$(basename $1 '.md' | sed -r 's/(^|_|-)([a-z])/ \U\2/g' )
 

@@ -37,9 +37,9 @@ alias cr="cd $CODING/Rust && ls"
 alias cjs="cd $CODING/JS && ls"
 alias pics="cd $PICS && ls"
 alias cf="cd $XDG_CONFIG_HOME && ls"
-alias exb="cd /media/Extra/Backups"
 alias ex="cd /media/Extra"
 alias re="cd $HOME/Repos"
+alias rof="cd $XDG_CONFIG_HOME/rofi && ls"
 
 # Open with vim
 alias bsp="nvim $XDG_CONFIG_HOME/bspwm/bspwmrc"

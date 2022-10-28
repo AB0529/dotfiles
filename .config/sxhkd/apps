@@ -33,3 +33,7 @@ ctrl + shift + backslash
 # Calculator
 super + equal
     rofi -show calc -modi calc -no-show-match -no-sort -theme ~/.config/rofi/message.rasi
+
+# Quick google
+super + space
+    $SCRIPTS/Misc/googler.sh
