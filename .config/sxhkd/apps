@@ -10,7 +10,7 @@ super + Return
 
 # Launcher
 super + grave
-    $HOME/.config/rofi/launcher.sh
+    rofi -show drun -modi drun -theme ~/.config/rofi/launcher.rasi
 
 # Browser
 super + b
@@ -31,5 +31,5 @@ ctrl + shift + backslash
    flameshot gui
 
 # Calculator
-super + c
-    rofi -show calc -modi calc -no-show-match -no-sort -theme  ~/.config/rofi/message.rasi
+super + equal
+    rofi -show calc -modi calc -no-show-match -no-sort -theme ~/.config/rofi/message.rasi

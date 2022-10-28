@@ -1,8 +1,1 @@
-* {
-	al: #0F111A80;
-	bg: #0F111A80;
-	bga: #0F111A80;
-	fg: #80878980;
-	ac: #bf616a80;
-	se: #bf616a80;
-}
+@import "~/.config/rofi/colors/dracula.rasi"
