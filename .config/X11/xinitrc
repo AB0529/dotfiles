@@ -8,12 +8,7 @@ fi
 
 # Set path
 export PATH=$HOME/.local/bin:$PATH
-export AWT_TOOLKIT=MToolkit
-export _JAVA_AWT_WM_NONREPARENTING=1
-export SXHKD_SHELL="/bin/bash"
-export TERMINAL=/usr/bin/alacritty
-export BROWSER=/usr/bin/firefox
-export EDITOR=/usr/bin/nvim
+# Load other vars
 export $(cat $HOME/.env | xargs -L 1)
 
 exec dbus-launch bspwm

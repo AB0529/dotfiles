@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# --- Auto Start --- #
+$SCRIPTS/System/autostart.sh &
+
 # --- Rules --- #
 bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating
@@ -8,32 +11,8 @@ bspc rule -a Alacritty:AB-Notes state=floating
 bspc monitor HDMI-A-0 -d I II III IV V
 bspc monitor DisplayPort-0 -d VI VII VIII IX X
 
-# --- Autostart --- #
-# Xrandr
-xrandr --output HDMI-A-0 --primary --output DisplayPort-0 --left-of HDMI-A-0 --output DisplayPort-0 --rotate right
-# Set cursor
-xsetroot -cursor_name left_ptr &
-# Hotkey Daemon
-sxhkd -c $HOME/.config/sxhkd/bspwm \
-    $HOME/.config/sxhkd/system \
-    $HOME/.config/sxhkd/apps \
-    $HOME/.config/sxhkd/audio &
-# Polybar & Theme
-sh-changetheme dracula.rasi &
-# Unclutter
-unclutter -idle 3 &
-# Wallpaper
-xwallpaper --zoom .wallpaper.jpg
-# Compton
-picom &
-# Start backup
-# $HOME/Scripts/System/backuper.sh &
-
 # -- Global Settings --- #
-# Load colors from Xresources
-xrdb $HOME/.config/X11/Xresources
-# FOCUS_COLOR=$(xrdb -query | grep background | cut -f 2 | head -1)
-FOCUS_COLOR="#ffffff"
+FOCUS_COLOR=$(xrdb -query | grep selected | cut -f2 | head -1)
 
 bspc config automatic_scheme alternate
 bspc config initial_polarity second_child
