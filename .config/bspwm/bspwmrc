@@ -12,6 +12,7 @@ bspc monitor HDMI-A-0 -d I II III IV V
 bspc monitor DisplayPort-0 -d VI VII VIII IX X
 
 # -- Global Settings --- #
+xrdb $XDG_CONFIG_HOME/X11/Xresources
 FOCUS_COLOR=$(xrdb -query | grep selected | cut -f2 | head -1)
 
 bspc config automatic_scheme alternate
