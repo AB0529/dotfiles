@@ -2,9 +2,9 @@
 speakers="alsa_output.pci-0000_08_00.3.analog-stereo"
 headphone="alsa_output.usb-Corsair_CORSAIR_HS70_Pro_Wireless_Gaming_Headset-00.analog-stereo"
 
-sink=$(pacmd list-sinks | grep "*" -A1 | awk 'FNR==2 { print $2 }' | sed -e 's/<\|>//g')
-vol=$(pulsemixer --get-volume)
-mute=$(pulsemixer --get-mute)
+sink=$(pactl info | grep -i "default sink" | cut -d ' ' -f3)
+vol=$(pamixer --get-volume)
+mute=$(pamixer --get-mute)
 inc=5
 
 case "$1" in
