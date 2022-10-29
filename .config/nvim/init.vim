@@ -15,7 +15,7 @@ set splitright
 set list
 set listchars=tab:>-
 set mouse=a
-set rnu
+set nu rnu
 
 let mapleader = ' '
 
@@ -30,7 +30,7 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'neovim/neovim-lspconfig'
+Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
