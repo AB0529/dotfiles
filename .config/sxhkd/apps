@@ -37,3 +37,7 @@ super + equal
 # Quick google
 super + space
     $SCRIPTS/Misc/googler.sh
+
+# Clipboard history
+super + c
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.config/rofi/message.rasi
