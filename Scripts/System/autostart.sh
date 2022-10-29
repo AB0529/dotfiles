@@ -21,4 +21,9 @@ sh-changetheme $THEME.rasi &
 unclutter -idle 3 &
 xwallpaper --zoom .wallpaper.jpg
 picom &
+
+# Audio continued
 pipewire-media-session &
+
+# Finally, create a backup
+$SCRIPTS/System/backuper.sh &

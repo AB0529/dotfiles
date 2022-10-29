@@ -1,9 +1,10 @@
 #!/bin/bash
+
 set -e
 
 to_backup="$HOME/Pics $HOME/Documents $HOME/.ssh"
-backup_dir="/media/Extra/Backups"
-timestamp=$(date +"%a-%m-%d-%y_%I:%M-%p")
+backup_dir="/mnt/Extra/Backups"
+timestamp=$(date +"%a-%m-%d-%y_%Ih%Mm-%p")
 sync_icon="$PICS/Icons/sync-ico.png"
 error_icon="$PICS/Icons/error-ico.png"
 
@@ -11,6 +12,7 @@ error_icon="$PICS/Icons/error-ico.png"
 ls -tp $backup_dir | grep -v '\$' | tail -n +5 | xargs -I {} -- rm $backup_dir/{} 
 
 backup() {
+    echo $backup_dir/$timestamp.tar.gz
     tar --exclude="node_modules" -zcvf "$backup_dir/$timestamp.tar.gz" $to_backup
 }
 
