@@ -1,22 +1,25 @@
 #!/bin/bash
 
 set -e
+pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && exit 1
 
-to_backup="$HOME/Pics $HOME/Documents $HOME/.ssh"
-backup_dir="/mnt/Extra/Backups"
-timestamp=$(date +"%a-%m-%d-%y_%Ih%Mm-%p")
-sync_icon="$PICS/Icons/sync-ico.png"
-error_icon="$PICS/Icons/error-ico.png"
+TO_BACKUP="$home/pics $home/documents $HOME/.ssh"
+BACKUP_DIR="/mnt/extra/backups"
+
+TIMESTAMP=$(date +"%a-%m-%d-%y_%Ih%Mm-%p")
+
+SYNC_ICON="$pics/icons/sync-ico.png"
+ERROR_ICON="$pics/icons/error-ico.png"
 
 # Remove if too many backups are present
-ls -tp $backup_dir | grep -v '\$' | tail -n +5 | xargs -I {} -- rm $backup_dir/{} 
+ls -tp $BACKUP_DIR | grep -v '\$' | tail -n +5 | xargs -I {} -- rm $BACKUP_DIR/{} 
 
 backup() {
-    echo $backup_dir/$timestamp.tar.gz
-    tar --exclude="node_modules" -zcvf "$backup_dir/$timestamp.tar.gz" $to_backup
+    echo $BACKUP_DIR/$TIMESTAMP.tar.gz
+    tar --exclude="node_modules" -zcvf "$BACKUP_DIR/$TIMESTAMP.tar.gz" $TO_BACKUP
 }
 
-notify-send -t 3000 -i $sync_icon "Backup" "Backup has started..." && \
+notify-send -t 3000 -i $SYNC_ICON "Backup" "Backup has started..." && \
 backup && \
-notify-send -t 5000 -i $sync_icon "Backup" "Backup finished!" || \
-notify-send -t 5000 -i $error_icon "Backup" "Backup failed!!"
+notify-send -t 3000 -i $SYNC_ICON "Backup" "Backup finished!" || \
+notify-send -t 5000 -i $ERROR_ICON "Backup" "Backup failed!!"

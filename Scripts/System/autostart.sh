@@ -5,10 +5,10 @@ pipewire &
 pipewire-pulse &
 
 # Xrandr
-xrandr --output HDMI-A-0 --primary --output DisplayPort-0 --left-of HDMI-A-0 --output DisplayPort-0 --rotate right
+xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --left-of HDMI-A-0 --output DisplayPort-1 --rotate right
 
 # Set cursor
-xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name left_ptr
 
 # Hotkey Daemon
 sxhkd -c $HOME/.config/sxhkd/bspwm \
@@ -21,6 +21,8 @@ sh-changetheme $THEME.rasi &
 unclutter -idle 3 &
 xwallpaper --zoom .wallpaper.jpg
 picom &
+
+greenclip clear
 greenclip daemon &
 
 # Audio continued
