@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Audio
+pipewire &
+pipewire-pulse &
+
 # Xrandr
 xrandr --output HDMI-A-0 --primary --output DisplayPort-0 --left-of HDMI-A-0 --output DisplayPort-0 --rotate right
 
@@ -17,3 +21,4 @@ sh-changetheme $THEME.rasi &
 unclutter -idle 3 &
 xwallpaper --zoom .wallpaper.jpg
 picom &
+pipewire-media-session &

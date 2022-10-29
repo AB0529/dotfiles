@@ -8,7 +8,7 @@ mute=$(pamixer --get-mute)
 inc=5
 
 case "$1" in
-    mute) [ $mute = 1 ] && pactl set-sink-mute $sink "no" || pactl set-sink-mute $sink "yes" ;;
+    mute) pactl set-sink-mute $sink "toggle" ;;
     volup) pactl set-sink-volume $sink +$inc% ;;
     voldown) pactl set-sink-volume $sink -$inc% ;;
     volset) 

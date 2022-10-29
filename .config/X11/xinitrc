@@ -11,6 +11,5 @@ export PATH=$HOME/.local/bin:$PATH
 # Load other vars
 export $(cat $HOME/.env | xargs -L 1)
 
-# Audio
-exec pipewire &
+# WM
 exec dbus-launch bspwm
