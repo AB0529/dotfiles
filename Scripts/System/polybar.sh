@@ -12,8 +12,8 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 # done
 
 # Main bar
-MONITOR=HDMI-A-0 polybar --reload main -c "~/.config/polybar/config.ini" &
+MONITOR=$PRIMARY_DISPLAY polybar --reload main -c "~/.config/polybar/config.ini" &
 # Secondary bar
-MONITOR=DisplayPort-1 polybar --reload main -c "~/.config/polybar/secondary.ini" &
+MONITOR=$SECONDARY_DISPLAY polybar --reload main -c "~/.config/polybar/secondary.ini" &
 
 echo "Bar launched..."

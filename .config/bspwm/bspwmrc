@@ -8,8 +8,8 @@ bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating
 
 # --- Monitors --- #
-bspc monitor HDMI-A-0 -d I II III IV V XI
-bspc monitor DisplayPort-1 -d VI VII VIII IX X
+bspc monitor $PRIMARY_DISPLAY -d I II III IV V XI
+bspc monitor $SECONDARY_DISPLAY -d VI VII VIII IX X
 
 # -- Global Settings --- #
 xrdb $XDG_CONFIG_HOME/X11/Xresources
