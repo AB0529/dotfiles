@@ -1,4 +1,12 @@
 #!/bin/bash
+pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && exit 1
+
+# Set path
+export PATH=$HOME/.local/bin:$PATH
+# Load other vars
+export $(cat $HOME/.env | xargs -L 1)
+# Load theme var
+export THEME=$(cat $HOME/.theme)
 
 # Audio
 pipewire &
@@ -19,7 +27,8 @@ sxhkd -c $HOME/.config/sxhkd/bspwm \
 sh-changetheme $THEME.rasi &
 
 unclutter -idle 3 &
-xwallpaper --zoom .wallpaper.jpg
+# xwallpaper --zoom .wallpaper.jpg
+xwallpaper --output $PRIMARY_DISPLAY  --zoom  .wallpaper.jpg --output $SECONDARY_DISPLAY --trim 1920x1080+350+0 --zoom  .wallpaper.jpg
 picom &
 
 greenclip clear

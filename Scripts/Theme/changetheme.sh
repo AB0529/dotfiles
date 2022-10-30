@@ -32,6 +32,11 @@ change_theme() {
     printf "[urgency_normal]\n    background = \"$bg\"\n    foreground = \"$fg\"\n    timeout = 0" >> $DUNSTRC
     # Restart dunst service
     pkill dunst
+
+    # Append to theme file
+    echo $1 | cut -f1 -d '.' > ~/.theme
+    # Refresh BSPWM
+    $XDG_CONFIG_HOME/bspwm/bspwmrc
 }
 
 # Theme argument is not provided

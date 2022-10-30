@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# --- Auto Start --- #
-$SCRIPTS/System/autostart.sh &
-
 # --- Rules --- #
 bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating
@@ -13,7 +10,7 @@ bspc monitor $SECONDARY_DISPLAY -d VI VII VIII IX X
 
 # -- Global Settings --- #
 xrdb $XDG_CONFIG_HOME/X11/Xresources
-FOCUS_COLOR=$(xrdb -query | grep selected | cut -f2 | head -1)
+FOCUS_COLOR=$(xrdb -query | grep "* selected:" | awk '{print $NF}')
 
 bspc config automatic_scheme alternate
 bspc config initial_polarity second_child

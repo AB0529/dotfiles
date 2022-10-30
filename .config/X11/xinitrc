@@ -6,10 +6,6 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
   echo "D-Bus per-session daemon address is: $DBUS_SESSION_BUS_ADDRESS"
 fi
 
-# Set path
-export PATH=$HOME/.local/bin:$PATH
-# Load other vars
-export $(cat $HOME/.env | xargs -L 1)
-
 # WM
+exec $HOME/Scripts/System/autostart.sh &
 exec dbus-launch bspwm
