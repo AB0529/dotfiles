@@ -4,13 +4,9 @@ pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && ex
 # Set path
 export PATH=$HOME/.local/bin:$PATH
 # Load other vars
-export $(cat $HOME/.env | xargs -L 1)
+export $(cat $HOME/.env | awk 'NF' | xargs -L 1)
 # Load theme var
 export THEME=$(cat $HOME/.theme)
-
-# Audio
-pipewire &
-pipewire-pulse &
 
 # Xrandr
 xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --left-of HDMI-A-0 --output DisplayPort-1 --rotate right
@@ -34,9 +30,5 @@ picom &
 greenclip clear
 greenclip daemon &
 
-# Audio continued
-pipewire-media-session &
-
 # Finally, create a backup
 $SCRIPTS/System/backuper.sh &
-

@@ -1,6 +1,4 @@
-#!/bin/sh
-speakers="alsa_output.pci-0000_08_00.3.analog-stereo"
-headphone="alsa_output.usb-Corsair_CORSAIR_HS70_Pro_Wireless_Gaming_Headset-00.analog-stereo"
+#!/bin/bash
 
 sink=$(pactl info | grep -i "default sink" | cut -d ' ' -f3)
 vol=$(pamixer --get-volume)
@@ -20,16 +18,15 @@ case "$1" in
         pactl set-sink-volume $sink $v% ;;
 esac
 
-
-if [ $sink = $speakers ]; then
-    echo echo "墳"
+if [ "$sink" = "$SPEAKERS" ]; then
+    echo "墳"
 else
     HEADPHONE_STATUS=$(headsetcontrol -bc)
 
     # Charging
-    [ $HEADPHONE_STATUS == -1 ] && echo " ()"
+    [ $HEADPHONE_STATUS == -1 ] && echo " ()" && exit 0
     # Off
-    [ $HEADPHONE_STATUS == -2 ] && echo ""
+    [ $HEADPHONE_STATUS == -2 ] && echo "" && exit 0
 
     echo " ($HEADPHONE_STATUS%)"
 fi

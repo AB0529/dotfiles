@@ -6,7 +6,7 @@
 
 # SXHDK
 super + shift + x
-   notify-send "SXHKD Restart" && \ 
+   notify-send -t 3000 "SXHKD Restart" && \ 
     pkill sxhkd && \ 
     sxhkd -c $HOME/.config/sxhkd/bspwm \
      $HOME/.config/sxhkd/system \

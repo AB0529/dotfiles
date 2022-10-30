@@ -3,13 +3,13 @@
 set -e
 pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && exit 1
 
-TO_BACKUP="$home/pics $home/documents $HOME/.ssh"
-BACKUP_DIR="/mnt/extra/backups"
+TO_BACKUP="$HOME/Pics $HOME/Documents $HOME/.ssh"
+BACKUP_DIR="/mnt/Extra/Backups"
 
 TIMESTAMP=$(date +"%a-%m-%d-%y_%Ih%Mm-%p")
 
-SYNC_ICON="$pics/icons/sync-ico.png"
-ERROR_ICON="$pics/icons/error-ico.png"
+SYNC_ICON="$PICS/icons/sync-ico.png"
+ERROR_ICON="$PICS/icons/error-ico.png"
 
 # Remove if too many backups are present
 ls -tp $BACKUP_DIR | grep -v '\$' | tail -n +5 | xargs -I {} -- rm $BACKUP_DIR/{} 

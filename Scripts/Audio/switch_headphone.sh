@@ -1,10 +1,9 @@
 #!/bin/sh
 icon="$HOME/Pics/Icons/headphone-ico.png"
-headphones="alsa_output.usb-Razer_Razer_Nari_Essential-00.analog-stereo"
 
 for playing in $(pacmd list-sink-inputs | awk '$1 == "index:" {print $2}')
 do
-    pacmd move-sink-input $playing $headphones
+    pacmd move-sink-input $playing $HEADPHONES
 done
 
-pa_movesinks $headphones && notify-send -t 1000 -i $icon "Default Output" "Now using headphones"
+$SCRIPTS/Audio/pa_movesinks.sh $HEADPHONES && notify-send -t 1000 -i $icon "Default Output" "Now using headphones"
