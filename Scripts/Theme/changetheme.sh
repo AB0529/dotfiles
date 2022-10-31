@@ -44,7 +44,7 @@ if [[ -z "$1" ]]
 then
     # Get the theme name and the file contents
     THEME=$(/bin/ls $XDG_CONFIG_HOME/rofi/colors | rofi -dmenu -theme $XDG_CONFIG_HOME/rofi/message.rasi)
-    change_theme $THEME
+    [ ! -z "$THEME" ] && change_theme $THEME
 else
     THEME=$1
     change_theme $THEME
