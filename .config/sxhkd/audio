@@ -56,3 +56,10 @@ alt + 1
     --print-reply \
     --dest=org.mpris.MediaPlayer2.spotify \
     /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+# Prev Spotify
+alt + 2
+    dbus-send \
+    --print-reply \
+    --dest=org.mpris.MediaPlayer2.spotify \
+    /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous && \
+    notify-send -i $ICONS/sync-ico.png -t 1500 "Spotify" "Rewind Playback"
