@@ -6,7 +6,7 @@
 
 # Terminal
 super + Return
-    $TERMINAL -t "$(hostname)@$(whoami)"
+    $TERMINAL -t "$(whoami)@$(hostname)"
 
 # Launcher
 super + grave
