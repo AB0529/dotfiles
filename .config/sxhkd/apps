@@ -41,3 +41,11 @@ super + space
 # Clipboard history
 super + c
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.config/rofi/message.rasi
+
+# Add selection too bookmark file
+super + shift + Insert
+    $SCRIPTS/Texts/bookmarker.sh mark
+
+# Show bookmark list
+super + Insert
+    $SCRIPTS/Texts/bookmarker.sh list
