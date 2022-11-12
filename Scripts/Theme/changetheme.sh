@@ -10,6 +10,11 @@ change_theme() {
     # cp $XDG_CONFIG_HOME/rofi/colors/$THEME $XDG_CONFIG_HOME/X11/Xresources
 
     cat $XDG_CONFIG_HOME/rofi/colors/$1 | sed -e "1,8d;9d;16d" -e 's/;\+$//' -e 's/..$//' -e 's/^/*/' -e 's/\\s\\+//g' > $XDG_CONFIG_HOME/X11/Xresources
+    # Add sxiv stuff
+    BG=$(xrdb -query | grep "* background:" | awk '{print $NF}')
+    FG=$(xrdb -query | grep "* foreground:" | awk '{print $NF}')
+    printf "Sxiv.background: $BG\nSxiv.foreground: $FG" >> $XDG_CONFIG_HOME/X11/Xresources
+    
     # Refresh colors
     xrdb $XDG_CONFIG_HOME/X11/Xresources
 
@@ -23,13 +28,10 @@ change_theme() {
     $SCRIPTS/System/polybar.sh &>/dev/null
 
     # Dunst themes
-    bg=$(xrdb -query | grep "* background:" | awk '{print $NF}')
-    fg=$(xrdb -query | grep "* selected:" | awk '{print $NF}')
-
     # Delete lines 291-294 from dunstrc
     sed -i $DUNSTRC -re "291,294d"
     # Append new item with new colors
-    printf "[urgency_normal]\n    background = \"$bg\"\n    foreground = \"$fg\"\n    timeout = 0" >> $DUNSTRC
+    printf "[urgency_normal]\n    background = \"$BG\"\n    foreground = \"$FG\"\n    timeout = 0" >> $DUNSTRC
     # Restart dunst service
     pkill dunst
 

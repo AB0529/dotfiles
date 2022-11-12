@@ -4,3 +4,5 @@
 *    selected:       #83A598
 *    active:         #B8BB26
 *    urgent:         #FB4934
+Sxiv.background: #282828
+Sxiv.foreground: #EBDBB2

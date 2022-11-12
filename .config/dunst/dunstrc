@@ -290,5 +290,5 @@
 # AUTO ADDED BY $SCRIPTS/Theme/change-theme.sh
 [urgency_normal]
     background = "#282828"
-    foreground = "#83A598"
+    foreground = "#EBDBB2"
     timeout = 0

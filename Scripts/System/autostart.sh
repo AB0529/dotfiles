@@ -9,7 +9,7 @@ export $(cat $HOME/.env | awk 'NF' | xargs -L 1)
 export THEME=$(cat $HOME/.theme)
 
 # Xrandr
-xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --left-of HDMI-A-0 --output DisplayPort-1 --rotate right
+xrandr --output $PRIMARY_DISPLAY --primary --output $SECONDARY_DISPLAY --left-of $PRIMARY_DISPLAY --output $SECONDARY_DISPLAY --rotate right 
 
 # Set cursor
 xsetroot -cursor_name left_ptr
