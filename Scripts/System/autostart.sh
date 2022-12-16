@@ -2,7 +2,7 @@
 pidof -o %PPID -x $0 >/dev/null && echo "ERROR: Script $0 already running" && exit 1
 
 # Set path
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.var/app/com.valvesoftware.Steam/data/applications:$PATH
 # Load other vars
 export $(cat $HOME/.env | awk 'NF' | xargs -L 1)
 # Load theme var
@@ -27,8 +27,10 @@ unclutter -idle 3 &
 xwallpaper --output $PRIMARY_DISPLAY  --zoom  .wallpaper.jpg --output $SECONDARY_DISPLAY --trim 1920x1080+350+0 --zoom  .wallpaper.jpg
 picom &
 
+# Misc
 greenclip clear
 greenclip daemon &
+blueman-tray
 
 # Finally, create a backup
 $SCRIPTS/System/backuper.sh &
