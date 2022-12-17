@@ -7,6 +7,7 @@ alias nou="cat $SCRIPTS/Texts/nou.txt | xclip -sel clip"
 alias fuckyou="$SCRIPTS/Texts/fuckyou.sh"
 alias nerd="cat $SCRIPTS/Texts/nerd_emoji.txt | xclip -sel clip"
 alias se="sudoedit"
+alias grep="rg"
 
 alias dfiles="/usr/bin/git --git-dir=$HOME/dotfiles.git --work-tree=$HOME"
 

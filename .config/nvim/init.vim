@@ -13,7 +13,7 @@ set spell
 set clipboard=unnamedplus
 set splitright
 set list
-set listchars=tab:>-
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set mouse=a
 set nu rnu
 
@@ -22,13 +22,12 @@ let mapleader = ' '
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ervandew/supertab'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'justinmk/vim-sneak'
 Plug 'chrisbra/Colorizer'
 Plug 'neovim/nvim-lspconfig'
@@ -50,13 +49,11 @@ Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()
 
-lua require("init")
-
 colorscheme gruvbox
 set bg=dark
 let g:airline_theme='gruvbox'
 
-map <Leader>m :Files <Esc>
+lua require("init")
 
 " NERDCommenter
 set formatoptions-=cro-
@@ -67,16 +64,12 @@ let g:NERDCommentEmptyLines = 1
 nmap <C-_> <plug>NERDCommenterToggle
 vmap <C-_> <plug>NERDCommenterToggle<CR>gv
 
-" NERDTree
-let NERDTreeQuitOnOpen=1
-nmap <F2> :NERDTreeToggle<CR>
-
 " Tabs
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemode=':t'
 nmap <leader>1 :bp<CR>
 nmap <leader>2 :bn<CR>
-nmap <C-q> :bq<CR>
+nmap <C-q> :bd<CR>
 
 " Spell
 hi clear SpellBad
@@ -84,7 +77,7 @@ hi SpellBad cterm=underline
 
 " Sneak
 map f <Plug>Sneak_s
-map F <Plug>Seank_S
+map F <Plug>Sneak_S
 
 " Move lines up and down
 nnoremap <C-k> :m-2<CR>
@@ -97,3 +90,4 @@ nnoremap <leader>t :TroubleToggle<CR>
 
 " Exit terminal mode
 :tnoremap <Esc> <C-\><C-n>
+

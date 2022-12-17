@@ -3,7 +3,9 @@ local lsp = require("lsp-zero")
 local trouble = require("trouble")
 local cmp = require("cmp")
 local null_ls = require("null-ls")
+local telescope = require("telescope")
 
+telescope.setup({ defaults = { file_ignore_patterns = { "node_modules" } } })
 mason.setup()
 lsp.preset("recommended")
 trouble.setup(require("trouble-setup"))
@@ -28,6 +30,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.prettier,
+		null_ls.builtins.formatting.beautysh,
 	},
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
