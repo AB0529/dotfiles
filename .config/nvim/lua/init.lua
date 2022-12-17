@@ -34,5 +34,3 @@ null_ls.setup({
 		vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>fm", "<cmd>lua vim.lsp.buf.format({async = true})<CR>", {})
 	end,
 })
-
-null_ls.setup({})
