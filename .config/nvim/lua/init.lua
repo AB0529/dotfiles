@@ -31,6 +31,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.beautysh,
+		null_ls.builtins.formatting.clang_format
 	},
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
