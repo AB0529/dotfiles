@@ -1,0 +1,15 @@
+
+[Default Applications]
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+inode/directory=pcmanfm.desktop
+application/pdf=mupdf.desktop
+image/jpeg=sxiv.desktop
+image/png=sxiv.desktop
+image/webp=sxiv.desktop
+image/jpg=sxiv.desktop
+image/gif=mpv.desktop
+text/plain=nvim.desktop
+text/json=nvim.desktop
+text/yaml=nvim.desktop
+text/x-shellscript=nvim.desktop
