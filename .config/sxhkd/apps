@@ -34,9 +34,9 @@ ctrl + shift + backslash
 super + equal
     rofi -show calc -modi calc -no-show-match -no-sort -theme ~/.config/rofi/message.rasi
 
-# Quick google
+# Background Program Viewer
 super + space
-    $SCRIPTS/Misc/googler.sh
+    $SCRIPTS/Misc/program_viewer.sh &
 
 # Clipboard history
 super + c
