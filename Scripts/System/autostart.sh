@@ -24,7 +24,7 @@ sh-changetheme $THEME.rasi &
 
 unclutter -idle 3 &
 # xwallpaper --zoom .wallpaper.jpg
-xwallpaper --output $PRIMARY_DISPLAY  --zoom  .wallpaper.jpg --output $SECONDARY_DISPLAY --trim 1920x1080+350+0 --zoom  .wallpaper.jpg
+xwallpaper --zoom .wallpaper.jpg
 picom &
 
 # Misc
