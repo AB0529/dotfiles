@@ -24,9 +24,9 @@ for f in $PROGRAMS; do
 
     # Icon if program is on or not
     if [ -f "$ON_LIST/$LOCKF" ]; then
-        PROGRAM_STR+="$i. 🟢 $NAME\n"
+        PROGRAM_STR+="$i. $NAME 🟢\n"
     else
-        PROGRAM_STR+="$i. 🔴 $NAME\n"
+        PROGRAM_STR+="$i. $NAME\n"
     fi
 
     PROGRAM_AR[$i]=$f
