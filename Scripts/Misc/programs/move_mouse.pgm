@@ -1,0 +1,4 @@
+TYPE=1
+LK=move_mouse.lock
+SH=~/Scripts/Misc/move_mouse.sh
+NAME=Move Mouse
