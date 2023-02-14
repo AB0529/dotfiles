@@ -6,7 +6,7 @@ vol=$(pactl list | grep -ia7 "$MICROPHONE" | grep -i "volume" | awk 'END {print 
 inc=5
 
 case "$1" in
-	mute) pactl set-source-mute $source "toggle" ;;
+	mute) pactl set-source-mute $source "toggle" && notify-send -t 3000 -i "$HOME/.icons/mic-ico.png" "Mute toggle" ;;
 	volup) pactl set-source-volume $source +$inc% ;;
     voldown) pactl set-source-volume $source -$inc% ;;
 esac

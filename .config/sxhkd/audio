@@ -33,7 +33,7 @@ XF86AudioMute
 # -=-=-=-=-=-=-=-=-=-=-=
 
 # Toggle Microphone Mute
-super + c
+Next
     $SCRIPTS/Audio/microphone.sh mute
 # Toggle Microphone Hearing
 Prior
