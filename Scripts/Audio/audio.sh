@@ -9,7 +9,7 @@ case "$1" in
     mute) pactl set-sink-mute $sink "toggle" ;;
     volup) pactl set-sink-volume $sink +$inc% ;;
     voldown) pactl set-sink-volume $sink -$inc% ;;
-    volset) 
+    volset)
         v=$(rofi -dmenu -p " Set Volume" -lines 0 -separator-style "none" -theme ~/.config/rofi/confirm.rasi &)
         wait
         echo $v
@@ -21,12 +21,13 @@ esac
 if [ "$sink" = "$SPEAKERS" ]; then
     echo "墳"
 else
-    HEADPHONE_STATUS=$(headsetcontrol -bc)
-
-    # Charging
-    [ $HEADPHONE_STATUS == -1 ] && echo " ()" && exit 0
-    # Off
-    [ $HEADPHONE_STATUS == -2 ] && echo "" && exit 0
-
-    echo " ($HEADPHONE_STATUS%)"
+    # HEADPHONE_STATUS=$(headsetcontrol -bc)
+    #
+    # # Charging
+    # [ $HEADPHONE_STATUS == -1 ] && echo " ()" && exit 0
+    # # Off
+    # [ $HEADPHONE_STATUS == -2 ] && echo "" && exit 0
+    #
+    # echo " ($HEADPHONE_STATUS%)"
+    echo ""
 fi
