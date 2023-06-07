@@ -3,6 +3,7 @@
 # --- Rules --- #
 bspc rule -r "*"
 bspc rule -a Alacritty:AB-Notes state=floating
+bspc rule -a Minecraft Launcher:minecraft-launcher state=floating
 
 # --- Monitors --- #
 bspc monitor $PRIMARY_DISPLAY -d I II III IV V XI

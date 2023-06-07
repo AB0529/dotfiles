@@ -15,3 +15,11 @@ source $XDG_CONFIG_HOME/fish/git_aliases
 starship init fish | source
 # SSH Agent
 #fish_ssh_agent
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/ab/miniconda3/bin/conda
+    eval /home/ab/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
+
