@@ -9,7 +9,7 @@ export $(cat $HOME/.env | awk 'NF' | xargs -L 1)
 export THEME=$(cat $HOME/.theme)
 
 # Xrandr
-xrandr --output $PRIMARY_DISPLAY --primary --output $SECONDARY_DISPLAY --left-of $PRIMARY_DISPLAY --output $SECONDARY_DISPLAY --rotate right 
+xrandr --output $PRIMARY_DISPLAY --primary --output $SECONDARY_DISPLAY --left-of $PRIMARY_DISPLAY --output $SECONDARY_DISPLAY --rotate left 
 
 # Set cursor
 xsetroot -cursor_name left_ptr
@@ -31,6 +31,7 @@ picom &
 greenclip clear
 greenclip daemon &
 blueman-tray
+alacritty
 
 # Finally, create a backup
 $SCRIPTS/System/backuper.sh &
