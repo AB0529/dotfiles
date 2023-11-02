@@ -19,6 +19,7 @@ x-scheme-handler/webcal=userapp-Thunderbird-PLYV11.desktop
 text/calendar=userapp-Thunderbird-PLYV11.desktop
 application/x-extension-ics=userapp-Thunderbird-PLYV11.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-PLYV11.desktop
+x-scheme-handler/discord-692435241373270077=discord-692435241373270077.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-9J1U11.desktop;

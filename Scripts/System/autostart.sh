@@ -13,6 +13,8 @@ xrandr --output $PRIMARY_DISPLAY --primary --output $SECONDARY_DISPLAY --left-of
 
 # Set cursor
 xsetroot -cursor_name left_ptr
+# Disable screen blackout
+xset s off -dpms
 
 # Hotkey Daemon
 sxhkd -c $HOME/.config/sxhkd/bspwm \
